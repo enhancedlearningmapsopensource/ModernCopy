@@ -364,7 +364,7 @@ The following steps are not required but simplify securing and configuring an AW
 -   Copy source and supporting packages to Modern Copy server.
     ```
     cd ~
-    wget https://github.com/EnhancedLearningMapsOpenSource/ModernCopy/archive/elm-build-v20190503.tar.gz   -O elm-build.tar.gz
+    wget https://github.com/enhancedlearningmapsopensource/ModernCopy/releases/download/MC-2019-05-21/ModernCopy20190521.tar.gz   -O elm-mc-build.tar.gz
     wget https://github.com/enhancedlearningmapsopensource/Dependencies/releases/download/20190520/external-lib.zip   -O elm-mc-dependencies.tar.gz
     wget https://github.com/enhancedlearningmapsopensource/Materials/raw/master/elm.sql   -O elm.sql
     wget https://github.com/enhancedlearningmapsopensource/Materials/raw/master/elm-post.sql   -O elm-post.sql
@@ -375,7 +375,7 @@ The following steps are not required but simplify securing and configuring an AW
 -   Install Modern Copy application source:
     ```
     cd /var/www/html
-    tar -xvf ~/elm-build.tar.gz
+    tar -xvf ~/elm-mc-build.tar.gz
     ls -al
     ```
 
