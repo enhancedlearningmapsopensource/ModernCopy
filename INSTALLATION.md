@@ -364,10 +364,12 @@ The following steps are not required but simplify securing and configuring an AW
 -   Copy source and supporting packages to Modern Copy server.
     ```
     cd ~
-    wget https://github.com/EnhancedLearningMapsOpenSource/ModernCopy/archive/elm-build-v20190503.tar.gz     -O elm-build.tar.gz
-    wget https://github.com/EnhancedLearningMapsOpenSource/ModernCopy/archive/db-v20190503.tar.gz            -O db.tar.gz
-    wget https://github.com/EnhancedLearningMapsOpenSource/ModernCopy/archive/resources-v20190503.tar.gz     -O resources.tar.gz
-    wget https://github.com/EnhancedLearningMapsOpenSource/ModernCopy/archive/admin-scripts-v20190503.tar.gz -O admin-scripts.tar.gz
+    wget https://github.com/EnhancedLearningMapsOpenSource/ModernCopy/archive/elm-build-v20190503.tar.gz   -O elm-build.tar.gz
+    wget https://github.com/enhancedlearningmapsopensource/Dependencies/releases/download/20190520/external-lib.zip   -O elm-mc-dependencies.tar.gz
+    wget https://github.com/enhancedlearningmapsopensource/Materials/raw/master/elm.sql   -O elm.sql
+    wget https://github.com/enhancedlearningmapsopensource/Materials/raw/master/elm-post.sql   -O elm-post.sql
+    wget https://github.com/enhancedlearningmapsopensource/Materials/releases/download/resources-2019-05-21/resources.tar.gz   -O resources.tar.gz
+    wget https://github.com/enhancedlearningmapsopensource/Materials/releases/download/mc-scripts-2019-05-03/mc-admin-scripts.tar.gz -O admin-scripts.tar.gz
     ```
 
 -   Install Modern Copy application source:
@@ -377,10 +379,17 @@ The following steps are not required but simplify securing and configuring an AW
     ls -al
     ```
 
+-   Add Modern Copy application dependencies:
+    ```
+    cd /var/www/html/external-lib
+    tar -xvf ~/elm-mc-dependencies.tar.gz
+    ls -al
+    ```
+
 -   Add Modern Copy data configuration:
     ```
     cd /var/www/html
-    tar -xvf ~/db.tar.gz
+    cp -p ~/elm.sql .
     ls -al
     ```
 
@@ -449,6 +458,16 @@ The following steps are not required but simplify securing and configuring an AW
 
 
 -   Verify that the Modern Copy login page appears.
+
+
+### Additional Schema Changes
+
+-   On the Modern Copy server run the following commands to apply the remaining schema changes.
+    ```
+    cd ~
+    ls -al
+    mysql -u elm_debug_user -p elm_release <elm-post.sql
+    ```
 
 
 ### Additional
