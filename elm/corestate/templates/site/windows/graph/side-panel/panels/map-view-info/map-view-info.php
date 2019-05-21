@@ -1,0 +1,1 @@
+<?php WriteTemplate(ELM_ROOT . "corestate/templates/site/windows/graph/side-panel/panels/map-view-info/template.html", "map-view-info-template") ?>

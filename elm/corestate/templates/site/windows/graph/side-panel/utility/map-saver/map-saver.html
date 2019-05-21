@@ -1,0 +1,25 @@
+<div class="row map-saver">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <label for="save-map">Save Map</label>
+            {{#ownedmap}}
+            {{#clean}}
+            <p>You are the owner of the currently displayed map view. There are currently no unsaved changes. Click below to save a copy of the current map view.</p>
+            {{/clean}}
+            {{^clean}}
+            <p>You are the owner of the currently displayed map view. <strong>There are unsaved changes</strong>. Click below to save a copy of the current map view or to save the changes.</p>
+            {{/clean}}
+            {{/ownedmap}}
+            {{^ownedmap}}
+            <p>Click below to save a copy of the current map view.</p>
+            {{/ownedmap}}
+            <button class="btn btn-primary save-map-copy"><span class="glyphicon glyphicon-duplicate"></span> Save Copy of Current Map</button>
+            
+            {{#ownedmap}}
+            {{^clean}}
+            <button class="btn btn-primary save-map"><span class="glyphicon glyphicon-floppy-save"></span> Save Changes to Current Map</button>
+            {{/clean}}
+            {{/ownedmap}}
+        </div>
+    </div>
+</div>

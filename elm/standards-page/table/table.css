@@ -1,0 +1,11 @@
+.subject-table{
+    --table-margin: 2px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+.subject-table > .subject-table-columns{
+    display: flex;
+    flex-flow:row;
+    font-weight: bold;
+    margin-bottom: calc(3em);
+}

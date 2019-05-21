@@ -1,0 +1,34 @@
+<div class="col-xs-12 bot-edge-col"> 
+    <div class="row" id="lists">
+        <div class="col-xs-12">﻿
+            <div class="row">
+                <div class="col-xs-12" id="edge-content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <strong>{{numnodes}} intermediary nodes </strong>(<a href="#" id="show-edge-hidden">show hidden nodes</a> <!--a href="#" id="show-path-only">show this path only</a-->)
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        {{#nodes}}
+                        <div class="col-xs-4 col-lg-4 edge-panel-node-row" id="edge-panel-node-{{linkid}}">
+                            <svg style="display:inline;width:5em;height:1.5em;vertical-align:middle;float:left;">
+                                <circle class="bottom-c-icon c-red{{#colorred}} c-fill{{/colorred}}" id="SredM-{{linkid}}"></circle>
+                                <circle class="bottom-c-icon c-blue{{#colorblue}} c-fill{{/colorblue}}" id="SbluM-{{linkid}}"></circle>
+                                <circle class="bottom-c-icon c-gray{{#colorgray}} c-fill{{/colorgray}}" id="SgreM-{{linkid}}"></circle>
+                            </svg>
+                            <div class="circle-text">
+                                <a class="bot-edge" href="#" {{#linkid}} id="bot-edge-{{linkid}}" {{/linkid}}>{{{nodetitle}}}</a>
+                            </div>
+                        </div>
+                        {{/nodes}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

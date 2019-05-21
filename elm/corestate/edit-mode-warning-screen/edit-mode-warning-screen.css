@@ -1,0 +1,15 @@
+.edit-mode-warning-screen{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    float: left;
+    top: 0%;
+    left: 0%;
+}
+
+.edit-mode-warning-screen > div{
+    color: red;
+    font-size: 3em;
+    position: absolute;
+    bottom: 0%;
+}

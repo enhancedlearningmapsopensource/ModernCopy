@@ -1,0 +1,13 @@
+<div class="container-fluid grid-container">
+    {{^hidechecks}}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="checkbox hasresource"><label><input type="checkbox" id="hide-non-resource-maps" {{#hidenores}}checked='checked'{{/hidenores}}> Hide standards without resources ({{nonres}} Maps)</label></div>
+            <div class="checkbox haselmview"><label><input type="checkbox" id="hide-user-maps" {{#hidenonelm}}checked='checked'{{/hidenonelm}}> Hide standards without ELM map views ({{nonelm}} Maps)</label></div>      
+        </div>
+    </div>
+    {{/hidechecks}}
+    <div class="row">
+        <div class="col-xs-12 sections"></div>
+    </div>
+</div>

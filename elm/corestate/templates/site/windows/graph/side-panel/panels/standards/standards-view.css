@@ -1,0 +1,12 @@
+.standard-row{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-top: 1px solid #ddd;
+}
+.standard-row:hover{
+    cursor:default;
+    background-color: var(--table-hover-color);
+}
+.standard-row .standard-description{
+    font-size: 0.9em;
+}

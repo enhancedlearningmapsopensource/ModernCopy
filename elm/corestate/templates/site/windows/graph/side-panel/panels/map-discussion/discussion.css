@@ -1,0 +1,111 @@
+#discussion-container{
+	display: flex;
+	flex-flow: column;
+}
+#discussion-container > #row-newtopictext{
+	display:none;
+}
+#discussion-container > #row-newtopictext #discussion-type > form > #node-group{
+    display:none;
+}
+#discussion-container > #row-newtopictext #discussion-type > form.node > #node-group{
+    display:block;
+}
+#discussion-container > #row-newtopictext #discussion-type > form > #resource-group{
+    display:none;
+}
+#discussion-container > #row-newtopictext #discussion-type > form.resource > #resource-group{
+    display:block;
+}
+#discussion-container > hr{
+	padding-top: 20px;
+}
+#discussion-container > h3{
+	flex: 1 1 auto;
+}
+#discussion-container > h3 > .btn-feedback{
+	float: right;
+}
+#discussion-container > .disc-row{
+	flex: 1 1 auto;
+	display: flex;
+    flex-flow: row;
+}
+#discussion-container > .disc-row > .data-col{
+	flex: 1 1 auto;
+	display: flex;
+    flex-flow: column;
+    padding-left: 15px;
+}
+#discussion-container > .disc-row > .data-col > .post-edit-text{
+	display:none;
+}
+#discussion-container > .disc-row > .data-col > .post-reply-text{
+	display:none;
+}
+#discussion-container > .disc-row > .data-col > div{
+	flex: 1 1 auto;
+}
+#discussion-container > .disc-row > .data-col > div.post-header{
+	padding-bottom: 20px;
+}
+#discussion-container > .disc-row > .data-col > div.post-header > .post-email{
+	float:left;
+	font-weight: bold;
+}
+#discussion-container > .disc-row > .data-col > div.post-header > .post-date{
+	float:right;
+}
+#discussion-container > .disc-row > .data-col > div.post-content{
+	padding-bottom: 40px;
+}
+
+#discussion-container > .disc-row > .data-col > div.post-buttons > .post-btn{
+	float:right;
+	padding-left:5px;
+}
+#discussion-container > .disc-row > .data-col > div.post-buttons > .post-btn > .btn{
+	padding: 3px 6px;
+}
+#discussion-container > .disc-row > .data-col > div.post-buttons > .post-drop{
+	float:left;
+	padding-right:15px;
+}
+#discussion-container > .disc-row > .data-col > div.post-buttons > div.delete-query > .btn{
+	padding: 3px 6px;
+}
+#discussion-container > .disc-row > .data-col > div.post-buttons > span.span-rep:hover{
+	cursor:pointer;
+}
+#discussion-container > .disc-row > .data-col > div.post-edits{
+	background-color: #d9edf7;
+	border-radius: 8px;
+	padding: 5px 5px 5px 5px;
+	margin-bottom: 20px;
+}
+#discussion-container > .disc-row > .data-col > div.post-edits > .edit-table{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+#discussion-container > .disc-row > .data-col > div.post-edits > .edit-table td{
+	border-top: none;
+}
+#discussion-container > .disc-row > .data-col > div.post-edits > .edit-table td.edit-id{
+	font-weight: bold;
+	width:auto;
+}
+.type-warning{
+    display: none;
+}
+.type-warning.showwarning{
+    display: inline;
+}
+
+
+/** PADDED CLASSES **/
+.disc-row-xs-0{}
+.disc-row-xs-1{padding-left:50px;}
+.disc-row-xs-2{padding-left:100px;}
+.disc-row-xs-3{padding-left:150px;}
+.disc-row-xs-4{padding-left:200px;}
+.disc-row-xs-5{padding-left:250px;}

@@ -1,0 +1,16 @@
+<div class="nav-button {{#open}}open{{/open}}" id="left-sub-column">
+    <div class="nav-button-row">
+        <div class="button-text">
+            {{name}}
+        </div>
+    </div>
+    <div class="drop-down">
+        {{#items}}
+        <div class="nav-drop-down-item" name="item-{{index}}">
+            <div class="nav-drop-down-center">
+                {{name}}
+            </div>
+        </div>
+        {{/items}}
+    </div>
+</div>

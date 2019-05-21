@@ -1,0 +1,92 @@
+/* Primary element: #nav-bar (06/22/2018) */
+#nav-bar{
+    --nav-text-height: 4%;
+    --nav-upper-pad: calc(calc(var(--nav-height) - var(--nav-text-height)) / 2); /* (nav-height - nav-text-height)/2 */
+    --nav-button-font-size: 16px;
+    --nav-button-font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    --nav-button-side-padding: 10px;
+    --nav-image-padding: 5px;
+    --nav-text-control-side-padding: 10px;
+    top: 0%;
+    left: 0%;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    z-index: 2;
+    pointer-events:none;
+}
+
+#nav-bar > .backdrop{
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: var(--nav-height);
+    background: var(--color-main);
+    z-index: -1;
+}
+
+#left-column{
+    pointer-events: none;
+}
+#right-column{
+    pointer-events: none;
+}
+#middle-column{
+    pointer-events: none;
+}
+
+/****************************/
+/* MOBILE BUFFER            */
+/****************************/
+#nav-bar > #mobile-buffer{
+    display:none;
+    height: var(--nav-height);
+    width: 100%;
+    background-color: var(--color-main);
+}
+
+/****************************************************************
+ * MEDIUM SCREENS
+ ****************************************************************/
+@media all and (max-width: 1200px) {
+    
+}
+
+/****************************************************************
+ * SMALL SCREENS
+ ****************************************************************/
+@media all and (max-width: 992px) {
+    
+}
+
+/****************************************************************
+ * MOBILE (LANDSCAPE)
+ ****************************************************************/
+@media all and (max-width: 768px) {
+    /*#nav-bar > #middle-column{
+        display:none;
+    }*/
+    #nav-bar > #mobile-buffer{
+        display:block;
+    }
+}
+
+/****************************************************************
+ * MOBILE (PORTRAIT)
+ ****************************************************************/
+@media (max-width: 480px) {
+    #nav-bar {
+        --nav-button-font-size: 10px;
+    }
+    /*#nav-bar > #middle-column > #upper-row{
+        display:none;
+    }*/
+    #nav-bar > #mobile-buffer{
+        display:block;
+    }
+}

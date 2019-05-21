@@ -1,0 +1,11 @@
+<svg width="640" height="640" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<clipPath id="cut-circle">
+			<circle r="320" cy="320" cx="320" />
+		</clipPath>
+	</defs>
+	<g>
+		<ellipse clip-path="url(#cut-circle)" fill="#000000" cx="320" cy="640" rx="200" ry="320" />
+		<circle r="120" cy="200" cx="320" fill="#000000" />
+	</g>
+</svg>

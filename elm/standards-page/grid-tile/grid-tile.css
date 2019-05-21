@@ -1,0 +1,7 @@
+.s-res-cell .grid-show-more{
+    visibility: hidden;
+}
+.s-res-cell.content-hidden .grid-show-more{
+    visibility: visible;
+}
+

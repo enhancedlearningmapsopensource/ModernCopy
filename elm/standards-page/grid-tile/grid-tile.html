@@ -1,0 +1,63 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 s-res-cell no-res" id="s-res-cell-{{mapid}}">
+    <div class="row">
+        <div class="shell">
+            <div class="row">
+                <div class="col-xs-12 map-title-bar">
+                    {{#redblue}}
+                    <img class="grid-icon" src="{{path}}/assets/img/searchsaved.svg" data-toggle="tooltip" title="Map Contains Red & Blue Nodes" data-placement="auto top" />
+                    <!--img class="grid-icon" src="{{path}}/assets/img/searchsaved.svg" /-->
+                    {{/redblue}}
+                    {{#red}}
+                    <img class="grid-icon" src="{{path}}/assets/img/searchdirect.svg" data-toggle="tooltip" title="Map Contains Only Red Nodes" data-placement="auto top" />
+                    {{/red}}
+                    {{#blue}}
+                    <img class="grid-icon" src="{{path}}/assets/img/question.svg" data-toggle="tooltip" title="Map Contains Only Blue Nodes" data-placement="auto top" />
+                    {{/blue}}
+                    {{#gray}}
+                    <img class="grid-icon" src="{{path}}/assets/img/searchquick.svg" data-toggle="tooltip" title="Map Contains Only Gray Nodes" data-placement="auto top" />
+                    {{/gray}}
+                    {{#elm}}
+                    <img class="grid-icon" src="{{elmiconpath}}" data-toggle="tooltip" title="ELM Map" data-placement="auto top"  />
+                    {{/elm}}
+                    {{#u}}
+                    <img class="grid-icon" src="{{path}}/assets/img/person.svg" data-toggle="tooltip" title="User Map" data-placement="auto top"  />
+                    {{/u}}
+                    {{#resources}}
+                    <img class="grid-icon" src="{{path}}/assets/img/pdf.svg" data-toggle="tooltip" title="Map Contains Resources" data-placement="auto top" />
+                    {{/resources}}
+                    <h3 class="grid-h3" data-toggle="tooltip" title="Open Map" data-placement="auto top" >{{title}}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 grid-content">
+                    {{#desc}}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <strong>Description: </strong>{{{desc}}}
+                        </div>
+                    </div>
+                    {{/desc}}
+                    {{#hasStandards}}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Associated Standards</h4>
+                        </div>
+                    </div>
+                    {{/hasStandards}}
+                    {{#standards}}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <strong>{{textid}}: </strong>{{{desc}}}
+                        </div>
+                    </div>
+                    {{/standards}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 grid-show-more">
+                    <span class="more">show more...</span><span class="less">...done</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

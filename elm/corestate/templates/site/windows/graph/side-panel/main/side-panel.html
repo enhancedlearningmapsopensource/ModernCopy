@@ -1,0 +1,40 @@
+<div id="side-panel">
+    <div class="side-panel-container">
+        <div class="row" id="title">
+            <div class="col-xs-11">
+                <h3>Title</h3>
+            </div>
+            <div class="col-xs-1">
+                <h3>
+                    <div class="btn-fake" id="btn-close-side-panel">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </div>
+                </h3>
+            </div>
+        </div>
+        <div class="row" id="tabs">
+            <div class="col-xs-12">
+                <div class ="row side-panel-tabs">
+                    {{#tabs}}
+                    <div class="col-xs-4 side-panel-tab">
+                        <a>
+                            {{.}}
+                        </a>
+                    </div>
+                    {{/tabs}}
+                </div>
+                <div class ="row roster-side-panel-tabs">
+                    {{#tabs}}
+                    <div class="col-xs-1 side-panel-tab">
+                        <a>
+                            {{.}}
+                        </a>
+                    </div>
+                    {{/tabs}}
+                </div>
+            </div>
+        </div>
+        <div class="row" id="content">
+        </div>
+    </div>
+</div>

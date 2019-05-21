@@ -1,0 +1,48 @@
+<div id="search-container">
+    <div class="container-fluid">
+        {{^hasresults}}
+        {{^searching}}
+        <div class="row" id="results-row">
+            <div class="col-xs-12">
+                <div class="row title-row">
+                    <div class="col-xs-2">&nbsp;</div>
+                    <div class="col-xs-10 warning-col"><h3>No matching search results</h3></div>
+                </div>
+            </div>
+        </div>
+        {{/searching}}
+        {{/hasresults}}
+
+        <div class="row" id="notice-row">
+            <div class="col-xs-12">
+                <div class="row title-row">
+                    <div class="col-xs-12 warning-col"><h3>Searching...</h3></div>
+                </div>
+            </div>
+        </div>
+
+        {{#hasresults}}
+        <div class="row" id="results-row">
+            <div class="col-xs-12">
+                <div class="node-area"></div>
+
+                {{#hasmaps}}
+                <div class="map-section-area"></div>
+                {{#hasextra}}
+                <hr class="search-hr" />
+                <div class="row" id="show-more-row">
+                    <div class="col-xs-2">&nbsp;</div>
+                    <div class="col-xs-8"><span class="show-more-span">Show all results</span></div>
+                    <div class="col-xs-2"><span class="search-nodes">{{numextra}} more</span></div>
+                </div>
+                {{/hasextra}}
+                {{/hasmaps}}
+            </div>
+        </div>
+        {{/hasresults}}
+
+        <div class="row subject-row">
+            
+        </div>
+    </div>
+</div>

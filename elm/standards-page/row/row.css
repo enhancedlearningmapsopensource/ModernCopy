@@ -1,0 +1,9 @@
+.subject-table-row{
+    display: flex;
+    flex-flow: row;
+    margin-bottom: calc(3*var(--table-margin));
+}
+
+.subject-table-row > .spacer{
+    flex: 1 1 auto;
+}

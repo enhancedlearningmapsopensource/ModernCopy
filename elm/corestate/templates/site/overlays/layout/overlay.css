@@ -1,0 +1,64 @@
+﻿.overlay-outer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display:none;
+}
+.overlay-outer.open{
+    display:block;
+}
+.overlay{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 200;
+    background-color: var(--color-main);
+    width: var(--overlay-size);
+    height: var(--overlay-size);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 16px;
+    padding:15px;
+}
+
+
+.overlay > .overlay-inner{
+    background-color: #FFF;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.overlay > .overlay-inner > hr{
+    margin-top: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-color: black;
+}
+
+.overlay > .overlay-inner > .container-fluid {
+    height: 100%;
+}
+
+.overlay > .overlay-inner > .container-fluid > #content-row{
+    height: 75%;
+    overflow-y: auto;
+}
+
+.overlay-buttons{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.overlay-buttons > button{
+    float: right;
+    margin-right: 15px;
+    width: 25%;
+}

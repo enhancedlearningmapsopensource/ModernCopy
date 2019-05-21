@@ -1,0 +1,57 @@
+.map-legend{
+    font-size: 0.7em;
+    width: auto;
+    background-color: #0000000d;
+    position: absolute;
+    bottom: 0%;
+    border: thin solid gray;
+    border-radius: 8px;
+    left: 0%;
+    box-shadow: 1px 1px 2px#888888;
+    pointer-events: none;
+}
+
+.map-legend.side-open{
+    left: var(--width-side-panel);
+    /*width: calc(100% - var(--width-side-panel));*/
+}
+.map-legend.bottom-open{
+    bottom: var(--bottom-panel-height);
+}
+
+.map-legend > .legend-inner{
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    display:flex;
+    flex-flow:row;
+}
+
+.map-legend > .legend-inner > .legend-group{
+    flex: 0 1 auto;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.map-legend > .legend-inner > .legend-group > .legend-img{
+    flex: 0 1 auto;
+    padding-bottom: 10px;
+}
+
+.map-legend > .legend-inner > .legend-group > .legend-circle{
+    flex: 0 1 auto;
+    padding-right: 5px;
+}
+
+.map-legend > .legend-inner > .legend-group > .legend-text{
+    flex: 0 1 auto;
+}
+
+.map-legend > .legend-inner > .legend-group.legend-stacked{
+    flex-flow: column;
+}

@@ -1,0 +1,95 @@
+.container{
+    --corner-radius: 8px;
+    --category-separation: 4px;
+}
+
+/* GROUPS */
+.group, .group-new{
+    display:none;
+    text-align: center;
+    background: var(--color-1);
+    color: #FFFFFF;
+    border-radius: var(--corner-radius);
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.group.open, .group-new.open{
+    display:block;
+}
+.group-new{
+    background: #FFFFFF;
+    color: #000000;
+    border: thin solid var(--color-1);
+}
+.group-new.active{
+    display:block;
+}
+.group-new .extended{
+    display:none;
+    text-align: left;
+}   
+.group-new.active .extended{
+    display:block;
+}    
+
+/* CATEGORY SET */
+.category-set{
+    display: none;
+}
+.category-set.open{
+    display: block;
+}
+
+/* CATEGORY */
+.category{
+    display: none;
+    border: solid #000000 thin;
+    border-radius: var(--corner-radius);
+    cursor: pointer;
+}
+.category.open{
+    display: block;
+}
+.category[name="users"]{
+    margin-right: calc(2*var(--category-separation) - 15px);
+}
+.category[name="preferences"]{
+    margin-right: calc(var(--category-separation) - 15px);
+    margin-left: calc(var(--category-separation) - 15px);
+}
+.category[name="permissions"]{
+    margin-left: calc(2*var(--category-separation) - 15px);
+}
+.category > div > .row{
+    text-align: center;
+}
+.category .category-header{
+    font-size: 1.5em;
+    padding-bottom: 10px;
+}
+.category.compressed .category-data{
+    display:none;
+}
+.category.compressed .category-data{
+}
+
+.cat-table{
+    display:none;
+}
+.cat-table.active{
+    display:block;
+}
+
+.tab-btn{
+    border: thin #000000 solid;
+    border-radius: var(--corner-radius);
+    background: var(--color-3);
+    cursor: pointer;
+}
+.modifier{
+    display:none;
+}
+.modifier.active{
+    display:table-row;
+}

@@ -1,0 +1,10 @@
+#node-table{
+	
+}
+#node-table > tbody > tr.node-row:hover{
+    background-color: var(--table-hover-color);
+    cursor: default;
+}
+.node-id-link{
+    white-space: nowrap;
+}

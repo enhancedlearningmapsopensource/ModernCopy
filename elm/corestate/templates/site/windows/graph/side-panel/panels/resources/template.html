@@ -1,0 +1,50 @@
+<div class="side-panel-content open" id="resources">
+    <div class="container-fluid">
+        {{#has.resourcemanager}}
+        <div class="row">
+            <div class="col-xs-offset-8 col-xs-4">
+                <button class='btn btn-block btn-primary manage-resources'>My Resources</button>
+            </div>
+        </div>
+        {{/has.resourcemanager}}
+        
+        <div class="row">
+            <div class="col-xs-12">
+                {{#invalid}}
+                <p>{{msg}}</p>
+                {{/invalid}}
+                {{^invalid}}
+                {{#has.adminres}}
+                <div class="table-responsive admin-resources">
+                    <table class="table">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                {{/has.adminres}}
+                {{#has.userres}}
+                <h4>User Resources</h4>
+                <div class="table-responsive user-resources">
+                    <table class="table">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                {{/has.userres}}
+                {{#has.relatedres}}
+                <h4>Related Resources</h4>
+                <div class="table-responsive related-resources">
+                    <table class="table">
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                {{/has.relatedres}}
+                {{/invalid}}
+                {{^showall}}
+                <button id="show-all-btn" class="btn btn-block btn-primary">Show All Resources</button>
+                {{/showall}}
+            </div>
+        </div>
+    </div>
+</div>

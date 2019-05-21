@@ -1,0 +1,27 @@
+<tr id="maprow-{{mapid}}" class="map-info-row{{#deleted}} bg-danger{{/deleted}}{{#active}} bg-success{{/active}}">
+    <td>
+        {{date}}<br />
+        {{^deleted}}
+        <span class="glyphicon glyphicon-edit mapview-icon" data-toggle="tooltip" data-placement="top" title="Edit Map"></span>
+        <span class="glyphicon glyphicon-upload mapview-icon" data-toggle="tooltip" data-placement="top" title="Upload Resources"></span>
+        {{/deleted}}
+        
+        {{^deleted}}
+        {{^active}} 
+        <span src="" class="glyphicon glyphicon-trash mapview-icon" data-toggle="tooltip" data-placement="top" title="Delete Map"></span>
+        {{/active}}
+        {{/deleted}}
+        {{#deleted}}
+        <span src="" class="glyphicon glyphicon-arrow-left mapview-icon" data-toggle="tooltip" data-placement="top" title="Resurect Map"></span>
+        {{/deleted}}
+    </td>
+    <td style="width:100%">
+        <a href="#" class="maptitle-link">{{#deleted}}[Deleted] {{/deleted}}{{#active}}[Active] {{/active}}{{title}}</a><br />
+        <strong>Description: </strong>{{desc}}
+    </td>
+    <td>
+        {{#hasresource}}
+        <img class="grid-icon" src="{{path}}/assets/img/pdf.svg" data-toggle="tooltip" title="" data-placement="auto top" data-original-title="Map Contains Resources">
+        {{/hasresource}}
+    </td>
+</tr>

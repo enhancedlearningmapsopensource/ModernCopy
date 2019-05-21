@@ -1,0 +1,50 @@
+<tr class="res-row" id="resource-{{id}}">
+    <a class="standard-link" href="#" >
+    <td class="resource-icons">
+        <img src="{{path}}/assets/img/pdf.svg" class="resource-img" />
+        {{#elm}}
+        <img src="{{elmiconpath}}" data-toggle="tooltip" data-placement="bottom" title="ELM Resource" class="elm-resource-img" />
+        {{/elm}}
+        {{^elm}}
+        <img src="{{path}}/assets/img/person.svg" data-toggle="tooltip" data-placement="bottom" title="User Resource" class="user-resource-img" />
+        {{/elm}}
+    </td>
+    <td style:"width:100%">{{#link}}<a href="{{link}}" target="_blank" class="resource-link">{{/link}}{{title}}{{#link}}</a>{{/link}}</td>
+    <td>
+        {{{description}}}
+        {{#has.attachments}}
+        {{#has.description}}
+        <br />
+        {{/has.description}}
+        {{#attachments}}
+            <br />            
+            {{#ispdf}}
+            {{! <!-- Admincopy Pdf --> }}
+            <img src="{{path}}/assets/img/pdf.svg" class="resource-img">
+            {{! <!-- End Admincopy Pdf --> }}
+            {{/ispdf}}
+            {{^ispdf}}
+            {{#isfile}}
+            {{! <!-- Moderncopy File --> }}
+            <span class="glyphicon glyphicon-file"></span>
+            {{! <!-- End Moderncopy File --> }}
+            {{/isfile}}
+            {{^isfile}}
+            {{#ismissing}}
+            {{! <!-- Modercopy File Missing --> }}
+            <span class="glyphicon glyphicon-warning-sign"></span>
+            {{! <!-- End Modercopy File Missing --> }}
+            {{/ismissing}}
+            {{^ismissing}}
+            {{! <!-- Modercopy Link --> }}
+            <span class="glyphicon glyphicon-link"></span>
+            {{! <!-- End Modercopy Link --> }}
+            {{/ismissing}}
+            {{/isfile}}
+            {{/ispdf}}
+            <a href="{{path}}" target="_blank"{{^isfile}} class="link-attachment"{{/isfile}}>{{name}}</a>
+        {{/attachments}}
+        {{/has.attachments}}
+    </td>
+    <td>{{#maps}}<a class="res-map-link" id="res-map-link-{{mapid}}" data-toggle="tooltip" data-placement="bottom" title="Open Map" href="#">{{title}}</a>{{#multimap}}<br />{{/multimap}}{{/maps}}</td>
+</tr>

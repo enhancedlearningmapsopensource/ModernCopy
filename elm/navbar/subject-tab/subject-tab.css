@@ -1,0 +1,13 @@
+.subject-row > div{
+    text-align: center;
+    background-color: var(--color-main);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.subject-row > div:first-child{    
+    border-radius: 0 0 0 8px;
+}
+.subject-row > div.active{    
+    background-color: var(--color-highlight);
+    color: #FFFFFF;
+}

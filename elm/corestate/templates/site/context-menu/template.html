@@ -1,0 +1,51 @@
+<div id="context-menu">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 context-type">
+                    <span class="unselectable">{{objectType}}</span>
+                    <span class="glyphicon glyphicon-remove"></span>
+		</div>
+	</div>
+	{{#items}}
+	<div class="row">
+		{{#allowHover}}
+		<div class="col-xs-12 context-menu-option cmo-allow">
+                    <span class="unselectable">{{name}}</span>
+			
+			{{#options}}
+			{{#template}}
+			<div class="context-menu-inner-template">
+
+			</div>
+			{{/template}}
+			{{/options}}
+		</div>
+		{{/allowHover}}
+		{{^allowHover}}
+		<div class="col-xs-12 context-menu-option">
+                    <span class="unselectable option-name">{{name}}</span>
+			{{#options}}
+			{{#circlesOn}}
+			<div class="context-menu-inner-template">
+				<svg style="display:inline;width:5em;height:1.5em;vertical-align:middle;float:left;">
+					<g class="c-group" stroke="#000" stroke-width=".08em">
+						<circle class="cmo-c-icon c-red" cursor="pointer" cx="1em" cy=".75em" r=".5em" fill="#F00"></circle>
+						<circle class="cmo-c-icon c-blue" cursor="pointer" cx="2.5em" cy=".75em" r=".5em" fill="#00F"></circle>
+						<circle class="cmo-c-icon c-gray" cursor="pointer" cx="4em" cy=".75em" r=".5em" fill="#888"></circle>
+					</g>
+				</svg>
+                                <!--svg style="display:inline;width:5em;height:1.5em;vertical-align:middle;float:left; border-left: solid thin white">
+					<g class="c-group" stroke="#000" stroke-width=".08em">
+						<circle class="cmo-c-icon c-green" cursor="pointer" cx="1em" cy=".75em" r=".5em" fill="#0F0"></circle>
+						<circle class="cmo-c-icon c-orange" cursor="pointer" cx="2.5em" cy=".75em" r=".5em" fill="#ffa500"></circle>
+					</g>
+				</svg-->
+			</div>
+			{{/circlesOn}}
+			{{/options}}
+		</div>
+		{{/allowHover}}
+	</div>
+	{{/items}}
+</div>
+</div>

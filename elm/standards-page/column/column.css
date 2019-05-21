@@ -1,0 +1,18 @@
+.subject-table-columns > .column{
+    flex: 0 1 100%;
+    text-align: center;
+    padding: var(--table-margin);
+}
+.subject-table-columns > .column:hover{
+    cursor:pointer;
+}
+.subject-table-columns > .column > .inner-column{
+    background-color: rgb(228, 233, 239);
+    padding: 4px;
+}
+.subject-table-columns > .column.selected > .inner-column{
+    background-color: #7491AF;
+    color: rgb(228, 233, 239);
+}
+
+

@@ -1,0 +1,45 @@
+/* Menu Styles */﻿
+
+#menu-view > #preference-menu{
+    position: absolute !important;
+    display:none;
+    width: var(--width-menu);
+    right:0%;
+    top: var(--nav-height);
+    bottom:0%;
+    background-color: #FFF;
+    pointer-events: all;
+    border-radius: 0 0 0 16px;
+    border-color: var(--color-main);
+    border-width: thin;
+    border-style: solid;
+    padding-bottom: 15px;
+    z-index: 1;
+}
+
+#menu-view.open > #preference-menu{
+    display:block;
+}
+
+#preference-menu > .menu-container{
+    padding-left:15px;
+    padding-right:15px;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+#preference-menu > .menu-container > #title{
+    background-color: var(--color-main);
+    color: var(--text-color);
+}
+#preference-menu > .menu-container > #title > .col-xs-2:hover{
+    background-color: var(--color-highlight);
+    cursor:pointer;
+}
+
+#preference-menu > .menu-container > #content{
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 15px;
+}

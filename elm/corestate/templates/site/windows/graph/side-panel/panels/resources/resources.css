@@ -1,0 +1,13 @@
+.resource-img, .elm-resource-img, .user-resource-img{
+    height: 1em;
+}
+.resource-icons{
+    white-space: nowrap;
+}
+.manage-resources{
+    margin-bottom: 15px;
+}
+.res-row:hover{
+    cursor: default;
+    background-color: var(--table-hover-color);
+}

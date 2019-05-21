@@ -1,0 +1,1 @@
+<?php WriteTemplate(ELM_ROOT . "corestate/templates/site/windows/graph/side-panel/panels/resources/template.html", "resources-template") ?>

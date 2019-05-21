@@ -1,0 +1,30 @@
+.bottom-c-icon{
+    cursor: pointer;
+    cy: 0.5em;
+    r: calc(0.5em - 3.5%);
+    stroke-width: 7%;
+    cursor:pointer;
+    fill:#FFF;
+}
+.bottom-c-icon.c-red{
+    stroke:#F00;
+    cx:1em;
+}
+.bottom-c-icon.c-red.c-fill{
+    fill:#F00;
+}
+.bottom-c-icon.c-blue{
+    stroke:#00F;
+    cx:2.5em;
+}
+.bottom-c-icon.c-blue.c-fill{
+    fill:#00F;
+}
+.bottom-c-icon.c-gray{
+    stroke:#888;
+    cx:4em;
+}
+.bottom-c-icon.c-gray.c-fill{
+    fill:#888;
+}
+

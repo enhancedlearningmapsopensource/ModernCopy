@@ -1,0 +1,54 @@
+<div id="discussion-container-new" class="container-fluid">
+    {{#unsaved}}
+    <h3>Unsaved Map</h3>
+    <p>No discussion avaliable. You are not viewing a saved map. To begin a discussion you may either save this map or open an existing saved map.</p>
+    {{/unsaved}}
+
+    {{^unsaved}}
+    <h3>Discussions</h3>
+    
+    <div id="discussions" class="row">
+        <div class="col-xs-12">
+            {{#sections}}
+            <div class="section{{#open}} open{{/open}}" id="{{id}}">
+                {{#hasdiscussions}}
+                <h4 class="section-heading"><span class="glyphicon glyphicon-menu-down open-section"></span><span class="glyphicon glyphicon-menu-up close-section"></span>{{typeuc}} Discussions</h4>
+                {{#discussions}}
+                <div class="discussion{{#ismap}} open{{/ismap}}" id="{{id}}">
+                    <h4{{^ismap}} class="notmap"{{/ismap}}>{{^ismap}}{{{name}}}{{/ismap}}{{#ismap}}&nbsp;{{/ismap}}</h4>
+                    <div class="container-fluid post-container">
+                        {{#posts}}
+                        <div class="post" id="{{id}}">
+                            {{>row}}
+                        </div>
+                        {{/posts}}
+                    </div>
+                </div>
+                {{/discussions}}
+                {{/hasdiscussions}}
+            </div>
+            {{/sections}}
+        </div>
+    </div>
+    
+    {{#showstartbtn}}
+    {{^showstart}}
+    <div class="row" id="row-newtopictext">
+        <div class="col-xs-12" id="discussion-type"></div>
+        <div class="col-xs-12">
+            <label for="ta-start-topic">Message</label>
+            <textarea id="ta-start-topic" class="form-control"></textarea><br />
+            <button class="btn btn-primary btn-submit-newtopic">Submit</button><button class="btn btn-default btn-cancel-newtopic">Cancel</button>
+        </div>
+    </div>
+    {{/showstart}}
+    {{#showstart}}
+    <button class="btn btn-block btn-primary btn-start-topic">Start New Topic</button>
+    {{/showstart}}
+    {{/showstartbtn}}
+    {{^showstartbtn}}
+    <p>No discussion avaliable. You are not viewing a saved map. To begin a discussion you may either save this map or open an existing saved map.</p>
+    {{/showstartbtn}}
+    {{/unsaved}}
+    
+</div>

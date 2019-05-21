@@ -1,0 +1,11 @@
+
+<h4{{^ismap}} class="notmap"{{/ismap}}>{{^ismap}}{{name}}{{/ismap}}{{#ismap}}&nbsp;{{/ismap}}</h4>
+
+
+<div class="container-fluid post-container">
+    {{#posts}}
+    <div class="post" id="{{.}}">
+        Post
+    </div>
+    {{/posts}}
+</div>

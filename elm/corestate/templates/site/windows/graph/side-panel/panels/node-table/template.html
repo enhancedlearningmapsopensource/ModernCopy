@@ -1,0 +1,38 @@
+{{#nodetabletemplate}}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12" style="padding-bottom: 15px; padding-top: 15px">
+            <button class="btn-primary btn" id="print-node-table" style="float:right; margin-left: 15px">Print</button>
+            <button class="btn-primary btn" id="export-node-table" style="float:right">Export (*.csv)</button>
+        </div>
+    </div>
+    <table class="table" id="node-table">
+        <tr>
+            {{#nodetableheader}}
+            <th>{{content}}</th>
+            {{/nodetableheader}}
+        </tr>
+
+        {{#noderowtemplate}}
+        <tr class="node-row">
+            {{#idcolumntemplate}}
+            <td class="id-column"><a href="#" id="{{linkid}}" class="{{linkclass}}">{{content}}</a></td>
+            {{/idcolumntemplate}}
+            {{#paragraphcolumntemplate}}
+            <td>{{{content}}}</td>
+            {{/paragraphcolumntemplate}}
+            {{#listcolumntemplate}}
+            <td>
+                {{#itemtemplate}}
+                {{content}}<br />
+                {{/itemtemplate}}
+                {{#linkitemtemplate}}
+                <a href="#" id="{{linkid}}" class="{{linkclass}}">{{{content}}}</a><br />
+                {{/linkitemtemplate}}
+            </td>
+            {{/listcolumntemplate}}
+        </tr>
+        {{/noderowtemplate}}
+    </table>
+    {{/nodetabletemplate}}
+</div>

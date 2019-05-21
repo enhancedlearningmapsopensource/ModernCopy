@@ -1,0 +1,28 @@
+<form class="form {{type}}">
+    <div class="form-group">
+        <label for="discussion-type-select">Discussion Type</label>
+        <select class="form-control" id="discussion-type-select">
+            {{#types}}
+            <option {{#selected}}selected {{/selected}}value="{{value}}">{{name}}</option>
+            {{/types}}
+        </select>
+    </div>
+    <div class="form-group" id="node-group">
+        <label for="discussion-type-select">Node <small class="text-danger type-warning{{#nodewarning}} showwarning{{/nodewarning}}">* Please select a node</small></label>
+        <select class="form-control" id="discussion-type-node">
+            <option value="na" selected disabled="disabled" class="disabled">Select Node</option>
+            {{#nodes}}
+            <option value="{{id}}">{{textid}} - {{desc}}</option>
+            {{/nodes}}
+        </select>
+    </div>
+    <div class="form-group" id="resource-group">
+        <label for="discussion-type-select">Resource <small class="text-danger type-warning{{#reswarning}} showwarning{{/reswarning}}">* Please select a resource</small></label>
+        <select class="form-control" id="discussion-type-resource">
+            <option value="na" selected class="disabled">Select Resource</option>
+            {{#resources}}
+            <option value="{{id}}">{{desc}}</option>
+            {{/resources}}
+        </select>
+    </div>         
+</form>

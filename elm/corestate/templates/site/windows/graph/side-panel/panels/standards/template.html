@@ -1,0 +1,29 @@
+<!--div class="container-fluid">
+    <table id="standardstable" class="table">
+        {{#standards}}
+        <tr class="standard-row" id="{{id}}">
+            <td>
+                <a class="standard-link" href="#">{{textid}}</a>
+            </td>
+            <td>{{description}}</td>
+        </tr>
+        {{/standards}}
+    </table>
+</div-->
+
+<div class="container-fluid">
+    {{#standards}}
+    <div class="row standard-row" id="{{id}}">
+        <div class="col-xs-2">
+            <a class="standard-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Show All Nodes Containing Standard ({{nodecount}} Nodes)">{{textid}}</a><br />
+        </div>
+        <div class="col-xs-10">
+            <span class="standard-description"><strong>Nodes:</strong> {{nodecount}} nodes contain this standard ({{nodeinmapcount}} in the current map)</span><br />
+            <span class="standard-description"><strong>Description:</strong> {{{description}}}</span>
+        </div>
+    </div>
+    {{/standards}}
+</div>
+
+<!-- Removed until funtional -->
+<!--button class="btn btn-block">Show All Standards</button-->

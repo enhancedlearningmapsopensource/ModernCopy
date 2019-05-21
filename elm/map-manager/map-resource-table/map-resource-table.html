@@ -1,0 +1,72 @@
+<div class="row map-resource-table">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Manage Resources</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4"><label for="map-name">Map Name:</label></div>
+            <div class="col-xs-8">{{mapName}}</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4"><label for="map-name">Map Description:</label></div>
+            <div class="col-xs-8">{{mapDesc}}</div>
+        </div>
+        {{^confirmremove}}
+        <div class="row">
+            <div class="col-xs-12"><label for="map-name">Resources:</label></div>
+        </div>
+        {{/confirmremove}}
+        <div class="row">
+            <div class="col-xs-12">
+                {{^confirmremove}}
+                <table class="table">
+                    {{^resources}}
+                    <tr>
+                        <td>
+                            No resources uploaded for this map.
+                        </td>
+                        </td>
+                        {{/resources}}
+                        {{#resources}}
+                    <tr id="resource-{{id}}">
+                        <td><span class="glyphicon glyphicon-edit edit-resource"></span></td>
+                        <td width="100%">{{nm}}</td>
+                        <td>{{desc}}</td>
+                        <td>*.{{ext}}</td>
+                        <td><span class="glyphicon glyphicon-trash delete-resource"></span></td>
+                    </tr>
+                    {{/resources}}
+                </table>
+                {{/confirmremove}}
+                {{#confirmremove}}
+                <p>Are you sure you want to remove {{toremove}}? This action cannot be undone.</p>
+                {{/confirmremove}}
+            </div>
+        </div>
+        
+        {{#confirmremove}}
+        <!-- Removal confirm buttons -->
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button class="btn btn-block btn-danger btn-confirm-remove"><span class="glyphicon glyphicon-trash"></span> Remove Resource</button>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button class="btn btn-block btn-reject-remove"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+            </div>
+        </div>
+        {{/confirmremove}}
+        
+        {{^confirmremove}}
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button class="btn btn-block btn-primary btn-upload">Upload New Resource</button>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <button class="btn btn-block btn-resource-back">Back</button>
+            </div>
+        </div>
+        {{/confirmremove}}
+    </div>
+</div>

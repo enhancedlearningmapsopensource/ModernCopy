@@ -1,0 +1,86 @@
+﻿.graph-wrapper{
+    left: 0px;
+    right:0%;
+    height: 100%;
+    position: absolute;
+    pointer-events: all;
+}
+
+#graph-wrapper.bottom-open{
+    height: calc(calc(100% - var(--bottom-panel-height)));
+}
+.graph-wrapper.side-panel-open{
+    left: var(--width-side-panel);
+}
+#graph-wrapper.menu-open{
+    right: var(--width-menu);
+}
+
+#graph-area-view{
+    width: 100%;
+    height: 100%;
+}
+
+#active-graph{
+    width: 100%;
+    height: 100%;
+}
+
+.edge-highlight{
+    stroke-width: 16px;
+    pointer-events:visiblePainted;
+    opacity:0.01;
+    cursor:pointer;
+}
+#edges-active-graph-view .edge-highlight:hover, #edges-active-graph-view .selected .edge-highlight{
+    opacity:0.15;
+}
+
+#unused-edges-active-graph-view .edge-highlight{
+    pointer-events: none;
+}
+
+
+
+#edges-active-graph-view .edge{
+    pointer-events: none;
+    marker-end: url(#end-arrow);
+    stroke: black;
+    stroke-width: 2px;
+}
+.dashed .edge{
+    stroke-dasharray: 3, 3;
+}
+
+.circle-icon{
+    stroke-width: 2px;
+    stroke: #000;
+    fill:#3FF;
+    opacity:0;
+    pointer-events:none;
+}
+
+.circle{
+    cursor: pointer;
+}
+.circle .i{
+    font-style: italic;
+}
+.circle.targetted{
+    stroke-width: 10px;
+}
+.circle.selected{
+    stroke-width: 8px;
+}
+.circle.hovered{
+    stroke-width: 15px;
+}
+.circle.selected.has-parents .parent-plus, .circle.selected.has-children .children-plus, .circle.selected .hourglass,
+.circle.targetted.has-parents .parent-plus, .circle.targetted.has-children .children-plus, .circle.targetted .hourglass{
+    opacity: 1;
+    pointer-events: all;
+    cursor:pointer;
+}
+
+
+

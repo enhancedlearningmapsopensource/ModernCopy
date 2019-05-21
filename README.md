@@ -1,2 +1,9 @@
-# ModernCopy
-Enhance Learning Maps - Modern Copy Application
+# Enhanced Learning Maps - Modern Copy application
+
+Copyright © 2019 by The University of Kansas
+
+Enhanced Learning Maps developed these materials under a grant from the Department of Education, PR/Award # S368A150013. Contents do not necessarily represent the policy of the Department of Education, and you should not assume endorsement by the Federal Government. Learning map materials are freely available for use by educators but may not be used for commercial purposes without written permission.
+
+See INSTALLATION file for installation and configuration guidance.
+
+See LICENSE file for license details.

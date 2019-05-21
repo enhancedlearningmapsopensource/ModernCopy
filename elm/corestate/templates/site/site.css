@@ -1,0 +1,382 @@
+﻿html{
+    font-size: 16px;
+}
+
+.site-body, .window-body{
+    /* Beta Colors */
+    /*--color-1: #034e7b;
+    --color-2: #0570b0;
+    --color-3: #3690c0;
+    --color-4: #74a9cf;
+    --color-5: #a6bddb;
+    --color-6: #d0d1e6;
+    --color-7: #f1eef6;*/
+    
+    /* ModernCopy Colors */
+    --color-1: #425363;
+    --color-2: #627383;
+    --color-3: #FF0000;
+    --color-4: #FF0000;
+    --color-5: #FF0000;
+    --color-6: #FF0000;
+    --color-7: #FF0000;
+    
+    /*--color-highlight: rgb(125, 125, 125);*/
+    --color-highlight: var(--color-2);
+    /*--color-main: #000000;*/
+    --color-main: var(--color-1);
+    --bottom-panel-height: 45%;
+    --bottom-panel-font-family: var(--menu-font-family);
+    --bottom-panel-font-size: 1em;
+    --bottom-panel-line-height: 20.8px;
+    --glow-color: rgb(51, 51, 51);			/** Very slight change **/
+    --height-minimized-panel: 40%;
+    --loaderradius: 15%;
+    --menu-font-size: var(--bottom-panel-font-size);
+    --menu-font-family: Trebuchet, Helvetica, Arial, sans-serif;
+    --nav-height: 10%;
+    --overlay-size: 75%;
+    --table-hover-color: rgb(224, 224, 224);
+    --text-color: #FFFFFF;
+    --width-menu:30%;
+    --width-minimized-graph: 20%;
+    --width-side-bar: 100%;
+    --width-side-panel: 40%;
+    --width-resource-manager: 55%;
+
+    /* Base font size */
+    font-size: 1.2em;
+}
+
+.site-body{
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+}
+
+.site-body.roster{
+    --width-side-panel: 90%;
+    --nav-height: 5%;
+}
+
+.site-body.full-sidebar{
+    --width-side-panel: 100%;
+}
+
+.window-body{
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------------------------------*/
+/* -- NAVIGATION BAR               --*/
+/* ----------------------------------*/
+
+/* Styles for the top navigation bar.*/
+
+.site-body > #fixed > .navbar-area{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.site-body > #fixed > .navbar-area > #navbar-view{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+/* ----------------------------------*/
+/* -- LOCK SCREEN                  --*/
+/* ----------------------------------*/
+
+/* Styles for the overlay used to lock
+the screen and prevent user input. Includes
+the spinning ball in the right hand corner.*/
+
+.site-body #lockscreen{
+    display: block;
+    position: absolute;
+    background-color: var(--color-main);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+}
+.site-body.locked #lockscreen{
+    opacity:0.5;
+    -webkit-transition: opacity 0.5s ease-in;
+    -moz-transition: opacity 0.5s ease-in;
+    -o-transition: opacity 0.5s ease-in;
+    -ms-transition: opacity 0.5s ease-in;
+    transition: opacity 0.5s ease-in;
+    pointer-events: all;
+}
+#lockscreen > #status{
+    color: white;
+    position: fixed;
+    bottom: 0%;
+    font-size: 2.5em;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+/**
+ * Css Loader Icon
+ * source: https://www.sitepoint.com/css3-ajax-loading-icon/
+ */
+.site-body.locked #lockscreen > #loader{
+    display: block;
+    position: absolute;
+    width: calc(2*var(--loaderradius));
+    right: 15px;
+    bottom: 15px;
+    border: 32px solid #fff;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 25px 2px #eee;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -ms-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.site-body.locked #lockscreen > #loader::after{
+    display: block;
+    content: " ";
+    padding-top: 100%;
+}
+
+@-webkit-keyframes spin{
+    from { -webkit-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -webkit-transform: rotate(180deg); opacity: 1; }
+    to   { -webkit-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-moz-keyframes spin{
+    from { -moz-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -moz-transform: rotate(180deg); opacity: 1; }
+    to   { -moz-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-ms-keyframes spin{
+    from { -ms-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -ms-transform: rotate(180deg); opacity: 1; }
+    to   { -ms-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-o-keyframes spin{
+    from { -o-transform: rotate(0deg); opacity: 0.4; }
+    50%  { -o-transform: rotate(180deg); opacity: 1; }
+    to   { -o-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@keyframes spin
+{
+    from { transform: rotate(0deg); opacity: 0.2; }
+    50%  { transform: rotate(180deg); opacity: 1; }
+    to   { transform: rotate(360deg); opacity: 0.2; }
+}
+
+#print-div{
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 511pt;
+    /*height: 511pt;*/
+}
+#print-div > svg{
+    width: 100%;
+    height: 100%;
+}
+
+.reset-element{
+    background: #FFF;
+    border: none;
+    color: #000;
+    display: block;
+    font: initial;
+    height: auto;
+    letter-spacing: normal;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+    visibility: visible;
+    width: auto;
+    word-spacing: normal;
+    z-index: auto;
+    max-width: initial;
+    border-spacing: initial;
+    border-collapse: initial;
+    box-sizing: initial;
+}
+
+#fixed{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.resource-manager-area{
+    position: absolute !important;
+    width: 55%; /*var(--width-menu);*/
+    right:0%;
+    top: var(--nav-height);
+    bottom:0%;
+    background-color: #FFF;
+    pointer-events: all;
+    padding-bottom: 15px;
+    z-index: 1;
+    display: none;
+}
+
+*.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/**
+ * Print size, target: Letter 8.5x11
+ * http://www.papersizes.org/us-paper-sizes-tsta.htm
+ */
+@page {
+    size: 216mm 279mm;
+    margin: 10mm;
+}
+@media print{
+    div {page-break-inside:auto}
+}
+
+#window-class{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    pointer-events:none;
+
+    --normal-display: block;
+    --medium-display: none;
+    --small-display: none;
+    --mobile-portrait-display: none;
+    --mobile-landscape-display: none;
+}
+#window-class div#normal{
+    display: var(--normal-display);
+}
+#window-class div#medium{
+    display: var(--medium-display);
+}
+#window-class div#small{
+    display: var(--small-display);
+}
+#window-class div#mobile-portrait{
+    display: var(--mobile-portrait-display);
+}
+#window-class div#mobile-landscape{
+    display: var(--mobile-landscape-display);
+}
+
+#locater-tool-area{
+    visibility: hidden;
+}
+#roster-view > #locater-tool-area{
+    visibility: visible;
+}
+
+/****************************************************************
+ * MEDIUM SCREENS
+ ****************************************************************/
+@media all and (max-width: 1200px) {
+    .site-body{
+        font-size: 1.0em;
+    }
+    #window-class {
+        --normal-display: none;
+        --medium-display: block;
+        --small-display: none;
+        --mobile-portrait-display: none;
+        --mobile-landscape-display: none;
+    }
+}
+
+/****************************************************************
+ * SMALL SCREENS
+ ****************************************************************/
+@media all and (max-width: 992px) {
+    .site-body{
+        font-size: 0.9em;
+    }
+    #window-class {
+        --normal-display: none;
+        --medium-display: none;
+        --small-display: block;
+        --mobile-portrait-display: none;
+        --mobile-landscape-display: none;
+    }
+}
+
+/****************************************************************
+ * MOBILE (LANDSCAPE)
+ ****************************************************************/
+@media all and (max-width: 768px) {
+    .site-body{
+        font-size: 0.7em;
+    }
+    #fixed{
+        /*--width-side-bar: 15%;*/
+        --width-side-panel: 50%;
+    }
+    .site-body.full-sidebar #fixed{
+        --width-side-panel: 100%;
+    }
+    #window-class {
+        --normal-display: none;
+        --medium-display: none;
+        --small-display: none;
+        --mobile-portrait-display: none;
+        --mobile-landscape-display: block;
+    }
+}
+
+/****************************************************************
+ * MOBILE (PORTRAIT)
+ ****************************************************************/
+@media (max-width: 480px) {
+    .site-body{
+        font-size: 0.5em;
+    }
+    #fixed{
+        --width-side-panel: 100%;
+    }
+    #window-class {
+        --normal-display: none;
+        --medium-display: none;
+        --small-display: none;
+        --mobile-portrait-display: block;
+        --mobile-landscape-display: none;
+    }
+}

@@ -1,0 +1,15 @@
+﻿.page-window{
+    position: absolute;
+    top: var(--nav-height);
+    width:100%;
+    height: calc(100% - var(--nav-height));
+    pointer-events: none;
+    /*display: none;*/
+}
+
+.main-window-area{
+    width: 100%;
+    height: calc(100% - var(--nav-height));
+    position: fixed;
+    top: var(--nav-height);
+}

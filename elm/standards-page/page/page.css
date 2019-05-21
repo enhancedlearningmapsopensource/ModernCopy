@@ -1,0 +1,15 @@
+#standards-window{
+    display: block !important;
+}
+#standards-window-view{
+    height: 100%;
+    width: 100%;
+}
+
+.standards-page{
+    height: 100%;
+    width: 100%;
+    pointer-events: all;
+    overflow-y: auto;
+}
+

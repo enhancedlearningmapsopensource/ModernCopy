@@ -1,0 +1,4 @@
+#graph-window > div#graph-wrapper > svg > g.svg-sub-graph > g > g.hovered > circle{
+    stroke-width:10px;
+}
+

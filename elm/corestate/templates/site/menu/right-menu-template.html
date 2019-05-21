@@ -1,0 +1,36 @@
+<div id="preference-menu">
+<div class="menu-container">
+    <div class="row" id="title">
+        <div class="col-xs-10">
+            <h3>Preferences</h3>
+        </div>
+        <div class="col-xs-2" id="close-menu">
+            <h3><div class="fake-button"><span aria-hidde="true" class="glyphicon glyphicon-chevron-right"></span></div></h3>
+        </div>
+    </div>
+    <div class="row" id="content">
+        <div class="col-xs-12">
+            {{#preferences}}
+            {{#mc}}
+                <label for="mc-{{id}}">{{name}}</label>
+                <select id="mc-{{id}}" name="mc-{{id}}" class="form-control">
+                    {{#choices}}
+                        <option value="{{val}}"{{#selected}} selected='selected'{{/selected}}>{{name}}</option>
+                    {{/choices}}
+                </select>
+            {{/mc}}
+            {{/preferences}}
+
+            {{#preferences}}
+            {{#check}}
+                <div class="checkbox">
+                    <label for="cb-{{id}}"><input id="cb-{{id}}" name="cb-{{id}}" type="checkbox" value="{{val}}"{{#checked}} checked='checked'{{/checked}}>
+                        {{name}}
+                    </label>
+                </div>
+            {{/check}}
+            {{/preferences}}
+        </div>
+    </div>
+</div>
+</div>

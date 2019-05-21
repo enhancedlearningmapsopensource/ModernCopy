@@ -1,0 +1,65 @@
+<div class="container-fluid open" id="mapinfomain">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table" id="map-view-details">
+                <tr>
+                    <th>Map Title:</th>
+                    <td id="mapinfo-title"><img src="" />{{title}}</td>
+                </tr>
+                <tr>
+                    <th>Map Description:</th>
+                    <td id="mapinfo-description">{{{description}}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr />
+    <div class="map-saver-area"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="map-view-print">Print Centered Map</label>
+                <p><small>Print a copy of the current map centered in the middle of the page.</small></p>
+                <button class="btn btn-block form-control btn-primary" id="map-view-print"><span class="glyphicon glyphicon-print"></span> Print Centered Map</button>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="map-view-print-visible">Print Visible Map</label>
+                <p><small>Print a copy of the current map as it is seen in the window. <strong>Note:</strong> Only visible nodes and edges will be printed and no centering will be applied.</small></p>
+                <button class="btn btn-block form-control btn-primary" id="map-view-print-visible"><span class="glyphicon glyphicon-print"></span> Print Visible Map</button>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="map-view-png">Download Centered Map</label>
+                <p><small>Download a copy of the current map centered in the middle of the page as an image.</small></p>
+                <button class="btn btn-block form-control btn-primary" id="map-view-png"><span class="glyphicon glyphicon-download-alt"></span> Download Centered Map (.png)</button>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="map-view-png-visible">Download Visible Map</label>
+                <p><small>Download a copy of the current map as it is seen in the window as an image. <strong>Note:</strong> Only visible nodes and edges will be printed and no centering will be applied.</small></p>
+                <button class="btn btn-block form-control btn-primary" id="map-view-png-visible"><span class="glyphicon glyphicon-download-alt"></span> Download Visible Map (.png)</button>
+            </div>
+        </div>
+        
+        
+        <!--div class="col-xs-12">
+            <button class="btn btn-block btn-primary {{^unsaved}}disabled{{/unsaved}}" id="savebutton">
+                {{#nosaveclean}}
+                Save Changes to Current Map (No changes detected)
+                {{/nosaveclean}}
+                {{^nosaveclean}}
+                {{#nosaveowner}}
+                Save Changes to Current Map (Must be the creator of the map)
+                {{/nosaveowner}}
+                {{^nosaveowner}}
+                Save Changes To Current Map
+                {{/nosaveowner}}
+                {{/nosaveclean}}
+            </button>
+        </div-->
+    </div>
+</div>

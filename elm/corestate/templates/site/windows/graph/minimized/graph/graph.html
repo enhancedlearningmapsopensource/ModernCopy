@@ -1,0 +1,25 @@
+﻿<div class="minimized-graph">
+    <div class="minimized-graph-inner container">
+        <div class="row minimized-title">
+            <div class="col-xs-12">
+                <div class="title-div">{{title}}{{#dirty}}*{{/dirty}}</div>
+            </div>
+        </div>
+        <div class="row graph-row">
+            <div class="col-xs-12">
+                <svg id="{{graphID}}" class="minimized-graph-svg"></svg>
+            </div>
+        </div>
+        <div class="row icon-row">
+            <div class="col-xs-4 minimized-icon replace" data-toggle="tooltip" title="Expand" data-placement="auto bottom">
+                <span class="glyphicon glyphicon-fullscreen"></span>
+            </div>
+            <div class="col-xs-4 minimized-icon swap" data-toggle="tooltip" title="Swap With Current Map" data-placement="auto bottom">
+                <span class="glyphicon glyphicon-random"></span>
+            </div>
+            <div class="col-xs-4 minimized-icon remove" data-toggle="tooltip" title="Remove Minimized Map" data-placement="auto bottom">
+                <span class="glyphicon glyphicon-trash"></span>
+            </div>
+        </div>
+    </div>
+</div>

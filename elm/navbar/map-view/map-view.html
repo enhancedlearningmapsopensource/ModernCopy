@@ -1,0 +1,38 @@
+<div class="row data-row" id="data-row-{{mapid}}">
+    <div class="col-xs-2">
+        {{#redblue}}
+        <img class="search-icon" src="{{path}}/assets/img/searchsaved.svg" />
+        {{/redblue}}
+        {{^redblue}}
+        {{#red}}
+        <img class="search-icon" src="{{path}}/assets/img/searchdirect.svg" />
+        {{/red}}
+        {{#blue}}
+        <img class="search-icon" src="{{path}}/assets/img/question.svg" />
+        {{/blue}}
+        {{#gray}}
+        <img class="search-icon" src="{{path}}/assets/img/searchquick.svg" />
+        {{/gray}}
+        {{/redblue}}
+        {{#elm}}
+        <img class="search-icon" src="{{elmiconpath}}" />
+        {{/elm}}
+        {{#u}}
+        <img class="search-icon" src="{{path}}/assets/img/person.svg" />
+        {{/u}}
+        {{^elm}}
+        {{^u}}
+        <img class="search-icon" src="{{path}}/assets/img/question.svg" />
+        {{/u}}
+        {{/elm}}
+        {{#res}}
+        <img class="search-icon" src="{{path}}/assets/img/pdf.svg" />
+        {{/res}}
+    </div>
+    <div class="col-xs-8 title-col">
+        {{title}}
+    </div>
+    <div class="col-xs-2">
+        <span class="search-nodes">{{numNodes}} Nodes</span>
+    </div>
+</div>

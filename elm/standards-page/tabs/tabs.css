@@ -1,0 +1,22 @@
+.standard-tabs{
+    display:flex;
+    flex-flow:row;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.standard-tabs > .standard-tab{
+    flex: 0 1 100%;
+    text-align: center;
+    background-color: #7491AF;
+    color: #FFFFFF;
+}
+.standard-tabs > .standard-tab:hover{
+    cursor: pointer;
+}
+
+.standard-tabs > .standard-tab.selected{
+    color: #7491AF;
+    background-color: #FFFFFF !important;
+    box-shadow: rgba(0, 0, 0, 0.14902) 12px 0px 13px -10px inset, rgba(0, 0, 0, 0.14902) -12px 0px 13px -10px inset
+}

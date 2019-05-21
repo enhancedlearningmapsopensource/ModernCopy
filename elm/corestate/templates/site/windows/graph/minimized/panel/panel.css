@@ -1,0 +1,173 @@
+﻿#minimized-panel{
+    position: fixed;
+    left: calc(var(--width-side-bar)*0.25);
+    right: 0%;
+    top: calc(100% - var(--height-minimized-panel));
+    bottom: 0%;
+    color: #FFF;
+    pointer-events: none;
+}
+
+/**
+ * BOTTOM OPEN
+ */
+#minimized-panel.bottom-open{
+    top: calc(100% - calc(var(--height-minimized-panel)*0.5) - var(--bottom-panel-height));
+    /*bottom: calc(var(--bottom-panel-height) + 15px);*/
+    height: calc(var(--height-minimized-panel)*0.5);
+}
+#minimized-panel.bottom-open > #minimized-panel-inner > .minimized-graph{
+    width: calc(var(--width-minimized-graph) * 0.5);
+}
+#minimized-panel.bottom-open > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .minimized-title-bar > .minimized-title-table > tbody > tr > td{
+    font-size: 11px;
+}
+#minimized-panel.bottom-open > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.minimized-title{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 0.5em;
+}
+
+#minimized-panel > #minimized-panel-inner{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+    pointer-events: none;
+        
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph{
+    width: var(--width-minimized-graph);
+    pointer-events:all;
+    height:100%;
+    padding-right: 15px;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner {
+    background-color: white;
+    pointer-events:all;
+    height:100%;
+    width:100%;
+    /*border-color: black;
+    border-radius: 8px;
+    border-width: thin;
+    border-style: solid;*/
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.minimized-title {
+    background-color: var(--color-main);
+    border-radius: 8px 8px 0 0;
+    border: solid thin black;
+    border-bottom: none;
+    height: 20%;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.minimized-title > .col-xs-12 > .title-div.unsaved {
+    font-weight: bold;
+    font-style: italic;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.minimized-title > div {
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.minimized-title > div > .icons > .minimized-icon{
+    float: right;
+    padding-left: 15px;
+}
+
+
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.graph-row {
+    height: 60%;
+    border: solid thin black;
+    border-top:none;
+    border-bottom:none;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.graph-row > div {
+    height: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.graph-row > div > svg {
+    height: 100%;
+    width:100%;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.graph-row > div > svg .circle.shared{
+    stroke-width: 7;
+    fill: #07d2f7;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.icon-row{
+    height: 20%;
+    background-color: var(--color-main);
+    border-radius: 0 0 8px 8px;
+    border: solid thin black;
+    border-top: none;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.icon-row > div{
+    height: 100%;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.icon-row > div:hover{
+    background-color: var(--color-highlight);
+    cursor: pointer;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .row.icon-row > div > .glyphicon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .table {
+    /*width:100%;
+    height:100%;*/
+    all: unset;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > table > tbody > tr > td {
+    border-top:0px;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .minimized-title {
+    /*color:var(--text-color);
+    background-color: var(--color-main);
+    padding-left:15px;
+    border-radius: 8px 8px 0 0;*/
+    padding: 0px;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .minimized-title > .minimized-title-table{
+    background-color: var(--color-main);
+    margin-bottom:0px;
+    color:var(--text-color);
+    border-radius: 8px 8px 0 0;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .minimized-title > .minimized-title-table > tbody > tr > td {
+    border-top:0px;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .minimized-title > .minimized-title-table > tbody > tr > td.minimized-title {
+    width:100%;
+}
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner > .minimized-title .minimized-icon:hover {
+    /* background-color: var(--color-highlight); */
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .graph-area {
+    width:100%;
+    padding:15px;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .graph-area > svg{
+    height:100%;
+    width:100%;
+}
+
+#minimized-panel > #minimized-panel-inner > .minimized-graph > .minimized-graph-inner .minimized-graph-row{
+    height:100%;
+}

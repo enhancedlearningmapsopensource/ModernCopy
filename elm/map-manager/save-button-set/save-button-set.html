@@ -1,0 +1,18 @@
+<div class="row">
+    {{#isdirty}}
+    <div class="col-xs-6">
+        <button class="btn-save-map btn btn-primary btn-block{{^isowner}} disabled{{/isowner}}">
+            Save Changes To Map
+            {{^isowner}}
+            <br />
+            <em>(Must be the map's owner)</em>
+            {{/isowner}}
+        </button>
+    </div>
+    {{/isdirty}}
+
+    {{#isdirty}}<div class="col-xs-6">{{/isdirty}}
+    {{^isdirty}}<div class="col-xs-12">{{/isdirty}}
+        <button class="btn-save-as-map btn btn-primary btn-block">Save As New Map{{#isdirty}}{{^isowner}}<br />&nbsp;{{/isowner}}{{/isdirty}}</button>
+    </div>
+</div>

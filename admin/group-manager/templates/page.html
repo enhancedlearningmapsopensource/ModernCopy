@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            {{#groups}}
+            <div class="row group" id="group-{{id}}">
+                <div class="col-xs-12">
+                    {{name}}
+                </div>
+            </div>
+            {{/groups}}
+            <div class="row group-new" id="group-{{id}}">
+                <div class="col-xs-12">
+                    <div class='row'>
+                        <div class="col-xs-12">
+                            New
+                        </div>
+                    </div>
+                    <div class='row extended'>
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label for="new-group-name">Group Name</label>
+                                <input type="email" class="form-control" id="new-group-name" placeholder="Group Name">
+                            </div>
+                            <button type='submit' id='create-group-btn' class='btn btn-primary'>OK</button>
+                            <button type='submit' id='cancel-group-btn' class='btn btn-default'>Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row categories">
+        <div class="col-xs-4">
+            <div class="row category" name="users">
+                
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="row category" name="preferences">
+                
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="row category" name="permissions">
+                
+            </div>
+        </div>
+    </div>
+    <div class="row tables">
+        <div class="col-xs-12">
+            <div class="row cat-table" name="users">
+                
+            </div>
+            <div class="row cat-table" name="preferences">
+                
+            </div>
+            <div class="row cat-table" name="permissions">
+                
+            </div>
+        </div>
+    </div>
+</div>

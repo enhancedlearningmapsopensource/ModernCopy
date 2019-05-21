@@ -1,0 +1,94 @@
+<div class="col-xs-12">    ﻿
+    {{^isvisible}}
+    <div class="row" id="warning-not-visible">
+        <div class="col-xs-12 text-danger"><strong>NOTE:</strong> This node is not currently visible in the map.</div>
+    </div>
+    {{/isvisible}}
+
+    {{! --------------------------------------------}}
+    {{! -- DESCRIPTION                              }}
+    <div class="row" id="description">
+        <div class="col-xs-12">{{{description}}}</div>
+    </div>
+    <hr />
+
+    <div class="row" id="lists">
+        <div class="col-xs-12">
+            {{! --------------------------------------------}}
+            {{! -- LISTS                                    }}
+            <div class="row">
+                {{#frames}}
+                {{#smalllist}}
+                <div class="col-md-5 col-xs-4" id="frame-{{id}}">
+                {{/smalllist}}
+                {{^smalllist}}
+                <div class="col-md-7 col-xs-8" id="frame-{{id}}">
+                {{/smalllist}}
+                    {{#sections}}
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <table class="table">
+                                <tr class="hidden-lg hidden-md">
+                                    <th colspan="2">{{{name}}}:</th>
+                                </tr>
+                                <tr style = "padding-top: 15px">
+                                    {{#circlelist}}
+                                    <th class="hidden-sm hidden-xs">{{{name}}}:</th>
+                                    {{#firstvalue}}
+                                    <td>
+                                        <svg style="display:inline;width:5em;height:1.5em;vertical-align:middle;float:left;">
+                                            <circle class="c-icon" {{#linkid}} id="SredM-{{linkid}}" {{/linkid}} cursor="pointer" cx="1em" cy=".75em" r=".5em" stroke="#F00" stroke-width=".3em" fill="#FFF"></circle>
+                                            <circle class="c-icon" {{#linkid}} id="SbluM-{{linkid}}" {{/linkid}} cursor="pointer" cx="2.5em" cy=".75em" r=".5em" stroke="#00F" stroke-width=".3em" fill="#FFF"></circle>
+                                            <circle class="c-icon" {{#linkid}} id="SgreM-{{linkid}}" {{/linkid}} cursor="pointer" cx="4em" cy=".75em" r=".5em" stroke="#888" stroke-width=".3em" fill="#888"></circle>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        <span class="circle-text"><a class="{{linkclass}}" href="#" {{#linkid}} id="bot-node-{{linkid}}" {{/linkid}}>{{{val}}}</a></span>
+                                    </td>
+                                    {{/firstvalue}}
+                                    {{/circlelist}}
+                                    {{^circlelist}}
+                                    <th class="hidden-sm hidden-xs">{{name}}:</th>
+                                    {{#firstvalue}}
+                                    <td><a class="{{linkclass}}" href="#" {{#linkid}} id="bot-node-{{linkid}}" {{/linkid}}>{{val}}</a></td>
+                                    {{/firstvalue}}
+                                    {{/circlelist}}
+                                </tr>
+                                {{#sectionlist}}
+                                <tr {{#extra}} class="extra" {{/extra}}>
+                                    {{#circlelist}}
+                                    <td class="hidden-sm hidden-xs">&nbsp;</td>
+                                    <td>
+                                        <svg style="display:inline;width:5em;height:1.5em;vertical-align:middle;float:left;">
+                                            <circle class="c-icon" {{#linkid}} id="SredM-{{linkid}}" {{/linkid}} cursor="pointer" cx="1em" cy=".75em" r=".5em" stroke="#F00" stroke-width=".3em" fill="#FFF"></circle>
+                                            <circle class="c-icon" {{#linkid}} id="SbluM-{{linkid}}" {{/linkid}} cursor="pointer" cx="2.5em" cy=".75em" r=".5em" stroke="#00F" stroke-width=".3em" fill="#FFF"></circle>
+                                            <circle class="c-icon" {{#linkid}} id="SgreM-{{linkid}}" {{/linkid}} cursor="pointer" cx="4em" cy=".75em" r=".5em" stroke="#888" stroke-width=".3em" fill="#888"></circle>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        <span class="circle-text"><a class="{{linkclass}}" href="#" {{#linkid}} id="bot-node-{{linkid}}" {{/linkid}}>{{{val}}}</a></span>
+                                    </td>
+                                    {{/circlelist}}
+                                    {{^circlelist}}
+                                    <td class="hidden-sm hidden-xs">&nbsp;</td>
+                                    <td><a class="{{linkclass}}" href="#" {{#linkid}} id="bot-node-{{linkid}}" {{/linkid}}>{{val}}</a></td>
+                                    {{/circlelist}}
+                                </tr>
+                                {{/sectionlist}}
+                                {{#numextra}}
+                                <tr class="extrainv">
+                                    <td class="hidden-sm hidden-xs">&nbsp;</td>
+                                    <td {{#circlelist}} colspan="2" {{/circlelist}}>and <a class="bot-more" href="#" {{#linkid}} id="bot-node-{{linkid}}" {{/linkid}}>{{numextra}} more...</a></td>
+                                </tr>
+                                {{/numextra}}
+                            </table>
+                        </div>
+                    </div>
+                    {{/sections}}
+                {{^smalllist}}</div>{{/smalllist}}
+                {{#smalllist}}</div>{{/smalllist}}
+            {{/frames}}
+            </div>{{! end .row }}
+        </div>{{! end .col-xs-12 }}
+    </div>{{! end .row#lists }}    
+</div>

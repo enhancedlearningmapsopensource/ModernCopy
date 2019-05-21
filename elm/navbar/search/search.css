@@ -1,0 +1,153 @@
+/****************************/
+/* MIDDLE COLUMN            */
+/****************************/
+
+/*
+#nav-bar > #mobile-buffer{
+    display:none;
+    height: var(--nav-height);
+    width: 100%;
+    background-color: var(--color-main);
+}
+*/
+
+.search-bar{
+    height: 100%;
+    width: 100%;
+    background-color:transparent;
+    z-index: 10;
+    --nav-input-height: 4%;
+    --nav-input-top-padding: calc(calc(var(--nav-height) - var(--nav-input-height))/2);
+}
+
+.site-body.roster .search-bar{
+    --nav-input-height: 2%;
+}
+
+.search-bar > .inner-search-bar{
+    height: 100%;
+    width: calc(100% - calc(2*var(--nav-text-control-side-padding)));
+    float:left;
+}
+
+.search-bar > .inner-search-bar > .spacer-bar{
+    background-color: var(--color-main);
+    height: var(--nav-input-top-padding);
+    width: 100%;
+}
+
+.search-bar > .inner-search-bar > .search-results{
+    background-color: var(--color-main);
+    height: var(--nav-input-top-padding);
+    width: 100%;
+}
+
+.search-bar.open > .inner-search-bar > .search-results{
+    background-color: transparent;
+    height: calc(100% - var(--nav-input-height) - var(--nav-input-top-padding));
+}
+.search-bar > .inner-search-bar > .search-results > #search-container{
+    display: none;
+}
+.search-bar.open > .inner-search-bar > .search-results > #search-container{
+    display: block;
+}
+
+.search-bar > .spacer-block{
+    width: var(--nav-text-control-side-padding);
+    height: var(--nav-height);
+    background-color: var(--color-main);
+    pointer-events: all;
+    float:left;
+}
+
+.search-bar .search-input-control{
+    height: var(--nav-input-height);
+    background-color: var(--color-main);
+}
+
+.search-bar .search-input-control input[type='text']{
+    /*padding-top: var(--nav-upper-pad);*/
+    border-radius: 8px;
+    height: 100%;
+    pointer-events: all;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#nav-bar > #middle-column > #upper-row {
+    width:100%;
+    height: var(--nav-upper-pad);
+    background-color: var(--color-main);
+}
+#nav-bar > #middle-column > #middle-row {
+    pointer-events: all;
+    background-color: var(--color-main);
+    height: calc(var(--nav-height) - calc(2*var(--nav-upper-pad)));
+}
+#nav-bar > #middle-column > #middle-row > .nav-control{
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    padding-left: var(--nav-text-control-side-padding);
+    padding-right: var(--nav-text-control-side-padding);
+}
+#nav-bar > #middle-column > #middle-row > .nav-control > input[type=text]{
+    width:100%;
+    height: 100%;
+    flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    /*border-radius: 4px 0 0 4px;*/
+}
+#nav-bar > #middle-column > #middle-row > .nav-control > button{
+    width:100%;
+    height: 100%;
+    flex: 0 10 auto;
+    -webkit-flex: 0 10 auto;
+    border-radius: 0 4px 4px 0;
+}
+#nav-bar > #middle-column > #lower-row {
+    width:100%;
+    height: var(--nav-upper-pad);
+    background-color: var(--color-main);
+}
+#nav-bar.search-open > #middle-column > #lower-row {
+    display:none;
+}
+#nav-bar > #middle-column > .search-drop-down {
+    display:none;
+    width:100%;
+    height: calc(100% - var(--nav-height));
+    margin-top: calc(-0.7*var(--nav-upper-pad));
+    /*background-color: magenta;*/
+}
+#nav-bar > #middle-column.open > .search-drop-down {
+    display:block;
+}
+#nav-bar > #middle-column > .search-drop-down > .search-drop-down-inner {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row;
+    -webkit-flex-flow: row;
+    padding-left: var(--nav-text-control-side-padding);
+    padding-right: var(--nav-text-control-side-padding);
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+}
+#nav-bar > #middle-column > .search-drop-down > .search-drop-down-inner > .under-text{
+    /*background-color: red;*/
+    flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    height:100%;
+    width:100%;
+}
+#nav-bar > #middle-column > .search-drop-down > .search-drop-down-inner > .under-submit{
+    /*background-color: blue;*/
+    flex: 0 10 auto;
+    -webkit-flex: 0 10 auto;
+    height:100%;
+    width:100%;
+}

@@ -1,0 +1,31 @@
+<div class="col-xs-12">
+    {{#tables}}
+    <div class="table-title">{{tabletitle}}</div>
+    <table class="table">
+        <tr>
+            {{#headers}}
+            <th>{{.}}</th>
+            {{/headers}}
+        </tr>
+        {{#rows}}
+        <tr id="r-{{i}}">
+            {{#cells}}
+            <td id="c-{{i}}" class='table-cell{{#textset}} center-set{{/textset}}'>
+                {{#text}}{{text}}{{/text}}
+                {{#textset}}
+                <div class="tab-btn">{{v}}</div>
+                {{/textset}}
+            </td>
+            {{/cells}}
+        </tr>
+        <tr class='modifier{{#mod}} active{{/mod}}'>
+            <td colspan='{{colspan}}'>
+                {{#mod}}
+                {{>sub}}
+                {{/mod}}
+            </td>
+        </tr>
+        {{/rows}}
+    </table>
+    {{/tables}}
+</div>

@@ -1,0 +1,16 @@
+.subject-table-row > .domain-group > .domain-group-cells > .cell{
+    flex: 0 1 100%;
+    padding: 4px;
+    text-align: center;
+    background-color: rgb(228, 233, 239);
+    margin-left: var(--table-margin);
+    margin-right: var(--table-margin);
+}
+.subject-table-row > .domain-group > .domain-group-cells > .cell:hover{
+    cursor: pointer;
+}
+.subject-table-row > .domain-group > .domain-group-cells > .cell.selected{
+    background-color: #7491AF;
+    color: rgb(228, 233, 239);
+}
+

@@ -1,0 +1,54 @@
+﻿.icon-play{
+	height: 0.8em;
+}
+
+.h2-copyright{
+	font-size:1.5em;
+}
+
+.login-small{
+	font-size:0.75em;
+}
+.err-msg{
+	display: none;
+	padding-left: 15px;
+	color: red;
+}
+.err-msg:before{
+	content:"*";
+}
+.err-msg.visible{
+	display: inline;
+}
+.img-logo{
+	margin-bottom:3em;
+	margin-top:1em;
+}
+.login-container h2{
+	font-family: Trebuchet, Helvetica, Arial, sans-serif;
+}
+
+#chk-rememberme{
+	float:left;
+}
+#loginsubmit, #createaccount, #reset{
+	float:right;
+}
+#login-table td, #login-table th {
+	border-color:white;
+}
+#submit-button-table{
+	border-spacing: 10px;
+}
+#invalidloginmessage{
+	color:red;
+}
+#ie-warning{
+    display: none;
+}
+.login-container.ie #ie-warning{
+    display: block;
+}
+.login-container.ie #login-table{
+    display: none;
+}

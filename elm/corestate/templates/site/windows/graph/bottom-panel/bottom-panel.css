@@ -1,0 +1,188 @@
+#bottom-panel {
+    /*width: calc(100% - );*/
+    height: var(--bottom-panel-height);
+    /*display: none;*/
+    /*font-size: var(--bottom-panel-font-size);*/
+    font-family: var(--bottom-panel-font-family);
+    line-height: var(--bottom-panel-line-height);
+    background-color: #FFF;
+    position:absolute;
+    right: 0%;
+    /*top: calc(50% - var(--bottom-panel-height));*/
+    bottom: 0%;
+    /*left: 0%;*/
+    left: 0px;
+    border-width: thin;
+    border-color: var(--color-main);
+    border-radius: 0 0 0 16px;
+    border-style: solid;
+    padding-bottom:15px;
+    pointer-events:all;
+}
+
+#bottom-panel .item-table{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#bottom-panel .item-text{
+    width:100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#bottom-panel > .content-container {
+    height: 100%;
+    padding-left: 15px;
+    padding-right:15px;
+    display: flex;
+    flex-flow: column;
+}
+
+#bottom-panel table {
+    /*font-size: var(--menu-font-size);*/
+}
+
+#bottom-panel.open{
+    display:block;
+}
+/*#bottom-panel.side-bar-open{
+    left: var(--width-side-bar);
+}*/
+#bottom-panel.side-panel-open{
+    left: var(--width-side-panel);
+}
+#bottom-panel > .content-container > .bot-header{
+    /*margin-right: -30px;*/
+    background-color: var(--color-main);
+    color: var(--text-color);
+}
+
+#bottom-panel > .content-container > .bot-header .bot-header-col{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#bottom-panel > .content-container > .bot-header .bot-close-col{
+    text-align: center;
+    background-color: var(--color-highlight);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--color-highlight);
+}
+#bottom-panel > .content-container > .bot-header .bot-close-col:hover{
+    cursor: pointer;
+    background-color: #97a7b5;
+}
+
+#bottom-panel > .content-container > .bot-header > .col-xs-1 > button{
+    margin-left: -15px;
+}
+
+#bottom-panel > .content-container > .bot-content{
+    background-color: #FFF;
+    height: 100%;
+    overflow-y: auto;
+}
+#bottom-panel > .content-container > .bot-content > .col-xs-12{
+
+}
+#bottom-panel > .content-container > .bot-content #description {
+    padding-top:15px;
+}
+#bottom-panel > .content-container > .bot-content hr {
+    border-top: 1px solid #403636;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/**--------------------------------------------------------
+ * CONTENT 	
+ */
+#lists table{
+    margin-bottom: 3px;
+    --cellpadding: 1px;
+}
+#lists table td{
+    border-top: none;
+    padding: var(--cellpadding);
+    position: relative;
+}
+#lists table th{
+    border-top: none;
+    padding: var(--cellpadding);
+    white-space: nowrap;
+    padding-right: 15px;
+}
+#lists table span.circle-text, #edge-content div.circle-text{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#edge-content div.text-col{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+/*#lists table span.circle-text{
+    position: absolute;
+    left: 0;
+    right: 0;
+}*/
+#bottom-panel table .extra{
+    display: none;
+}
+#bottom-panel table.open .extra{
+    display: table-row;
+}
+
+
+#bottom-panel table .extrainv{
+    display: table-row;
+}
+#bottom-panel table.open .extrainv{
+    display: none;
+}
+
+
+.bot-close{
+    background-color: var(--color-main);
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
+}
+.bot-svg-col{
+    padding-right:15px;
+}
+.bot-svg{
+    display: inline;
+    width: 5em;
+    height: 1.5em;
+    vertical-align: middle;
+    float: left;
+}
+.bot-pdf{
+    max-width: 1em;
+    display: inline;
+    padding-right: 5px;
+}
+#close-bottom-panel{
+    width: 10%;
+    position: fixed;
+    bottom: /*calc*/var(--bottom-panel-height)/*) + var(--nav-height)))*/;
+    right: 0px;
+}
+#close-bottom-panel:after{
+    display: block;
+    content: " ";
+    padding-top: 100%;
+}
+
+/**--------------------------------------------------------
+ * CIRCLE LISTS 	
+ */
+#bottom-panel[min-width~="400px"] .circle-list-title{
+    background-color: red;
+    width: 10%;
+}

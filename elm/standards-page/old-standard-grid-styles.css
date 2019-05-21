@@ -1,0 +1,130 @@
+/** HIDE MAPS WITHOUT RESOURCES **/
+#standard-grid.hidenores .no-res {
+    display: none;
+}
+#standard-grid.hidenores .s-section{
+    display: none;
+}
+#standard-grid.hidenores .s-section.res-section{
+    display: block;
+}
+
+/** HIDE USER MAPS **/
+#standard-grid.hideusermaps .s-res-cell {
+    display: none;
+}
+#standard-grid.hideusermaps .s-res-cell.admin-map {
+    display: block;
+}
+#standard-grid.hideusermaps .s-section {
+    display: none;
+}
+#standard-grid.hideusermaps .s-section.admin-section {
+    display: block;
+}
+
+/** HIDE WEAK MAPS **/
+#standard-grid.hideweakmaps .s-res-cell.weak-map {
+    display: none;
+}
+#standard-grid.hideweakmaps .s-section.weak-section {
+    display: none;
+}
+
+/** HIDE BOTH **/
+#standard-grid.hideusermaps.hidenores .s-section {
+    display: none;
+}
+#standard-grid.hideusermaps .s-section.admin-section.res-section {
+    display: block;
+}
+
+
+.s-map-grid{
+    background-color: #EEEEEE;
+}
+.s-res-cell{
+    /*background-color: #FFFFFF;*/
+    /*margin: 0.5em;*/
+    /*height:auto;*/
+    /*padding: 0.5em;*/
+    /*white-space: normal;*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*border: 2px solid #CCCCCC;*/
+    /*border-radius: 4px;*/
+}
+.s-res-cell .row{
+    height:auto;
+    /*width:100%;*/
+}
+.s-res-cell > .row > .shell{
+    background-color: #FFFFFF;
+    border: 2px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 5px;
+}
+.s-res-cell > .row > .shell > .row > .grid-content{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 12em;
+}
+.s-res-cell > .row > .shell > .row > .grid-show-more{
+    text-align: right;
+    font-weight: bold;
+    color: #0000EE;
+    background-color: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+
+.s-res-cell > .row > .shell > .row > .grid-show-more > .less{ display:none; }
+.s-res-cell > .row > .shell.open > .row > .grid-content{ overflow-y: auto;}
+.s-res-cell > .row > .shell.open > .row > .grid-show-more > .less{ display:inline; }
+.s-res-cell > .row > .shell.open > .row > .grid-show-more > .more{ display:none;}
+
+
+
+/**
+ * 	ICONS
+ */
+.grid-icon{
+    max-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    float: left;
+    margin-right: 0.3em;
+}
+.grid-h3{
+    float:left;
+    cursor: pointer;
+}
+hr.desc-standard{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border: 0;
+    border-top: 1px solid #000;
+}
+
+@media all and (max-width: 1200px) {
+    .grid-icon{
+        max-height: 22px;
+    }
+    .grid-h3{
+        font-size: 22px;
+    }
+}
+
+
+.standard-tab{
+    padding-top:12px;
+    padding-bottom:12px;
+    font-family: Lato, Trebuchet, Helvetica, Arial, sans-serif; /* Same as working copy */
+    font-weight: bold;
+    font-size: 24px;
+}
+.standard-tab.open{
+    color: #7491AF;
+    background-color: #FFFFFF !important;
+    box-shadow: rgba(0, 0, 0, 0.14902) 12px 0px 13px -10px inset, rgba(0, 0, 0, 0.14902) -12px 0px 13px -10px inset;
+}

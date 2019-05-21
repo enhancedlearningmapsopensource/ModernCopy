@@ -1,0 +1,9 @@
+<p>Setup has verified credentials and configured the system. The database will now be imported. This could take some time.</p>
+<p id="status">Importing...</p>
+
+<script src="./external-lib/jquery/v3.2.1/jquery.min.js"></script>
+<script>
+    $.post("./setup/import.php", {}, function(ret){
+        $("#status").html(ret);
+    });
+</script>

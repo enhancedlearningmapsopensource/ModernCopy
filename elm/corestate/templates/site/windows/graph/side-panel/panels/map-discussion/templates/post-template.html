@@ -1,0 +1,110 @@
+<div class="disc-row disc-row-xs-{{lvl}}" id="post-{{id}}">
+    <div class="disc-col" id="icon-col">
+        <div>
+            <img class="img-discussion" src="{{path}}/assets/img/elm_50px.png">
+        </div>
+    </div>
+    <div class="disc-col data-col">
+        {{#editOpen}}
+        <div class="post-edits">
+            <table class="table edit-table">
+                <tr>
+                    <td colspan="3">
+                        Edited Posts
+                    </td>
+                </tr>
+                {{#edits}}
+                <tr>
+                    <td class="edit-id">
+                        {{id}}
+                    </td>
+                    <td>
+                        {{{msg}}}
+                    </td>
+                    <td>
+                        {{date}}
+                    </td>
+                </tr>
+                {{/edits}}
+            </table>
+        </div>
+        {{/editOpen}}
+        
+        <div class="post-header">
+            <span class="post-email">
+                {{^editOpen}}
+                {{user}}
+                {{/editOpen}}
+                {{#editOpen}}
+                Current Post
+                {{/editOpen}}
+            </span>
+            <span class="post-date">{{date}}</span>
+        </div>
+
+        {{^editDiagOpen}}
+        <div class="post-content">{{{msg}}}</div>
+        {{/editDiagOpen}}
+
+        {{#editDiagOpen}}
+        <div class="post-edit-text">
+            <textarea id="ta-edit-{{id}}" class="form-control">{{{msg}}}</textarea><br />
+            <button class="btn btn-primary btn-submit-edit">Submit</button><button class="btn btn-default btn-cancel-edit type-edit">Cancel</button>
+        </div>
+        {{/editDiagOpen}}
+        {{#repDiagOpen}}
+        <div class="post-reply-text">
+            <textarea id="ta-reply-{{id}}" class="form-control"></textarea>
+            <br />
+            <button class="btn btn-primary btn-submit-reply">Submit</button><button class="btn btn-default btn-cancel-reply type-reply">Cancel</button>
+        </div>
+        {{/repDiagOpen}}
+        
+        {{#showbuttons}}
+        <div class="post-buttons">
+            {{#numreplies}}
+            <span class="span-rep post-drop type-reply">
+                {{numreplies}} {{#singlereply}}Reply{{/singlereply}}{{^singlereply}}Replies{{/singlereply}}
+                {{^repOpen}}
+                <span class="btn-view glyphicon glyphicon-menu-down type-reply" aria-hidden="true"></span>
+                {{/repOpen}}
+                {{#repOpen}}
+                <span class="btn-view glyphicon glyphicon-menu-up type-reply" aria-hidden="true"></span>
+                {{/repOpen}}
+            </span>
+            {{/numreplies}}
+            {{#numedits}}
+            <span class="span-ed post-drop type-edit">{{numedits}} {{#singleedit}}Edit{{/singleedit}}{{^singleedit}}Edits{{/singleedit}} 
+                {{^editOpen}}
+                <span class="btn-view glyphicon glyphicon-menu-down type-edit" aria-hidden="true"></span>
+                {{/editOpen}}
+                {{#editOpen}}
+                <span class="btn-view glyphicon glyphicon-menu-up type-edit" aria-hidden="true"></span>
+                {{/editOpen}}
+            </span>
+            {{/numedits}}
+
+            <span class="span-reply post-btn"><button class="btn-reply btn btn-primary type-reply"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></button></span>
+            {{#canedit}}
+            <span class="span-edit post-btn"><button class="btn-edit btn btn-primary type-edit"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></span>
+            {{^delDiagOpen}}
+            <span class="span-delete post-btn"><button class="btn-delete btn btn-danger type-delete"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button></span>
+            {{/delDiagOpen}}
+            {{/canedit}}
+            {{#delDiagOpen}}
+            <div class="delete-query bg-danger">
+                <button style="float:right; margin-left:6px; margin-bottom:6px;" class="btn delete-cancel-btn btn-default type-delete"><span class="glyphicon-remove glyphicon"></span></button>
+                <button style="float:right;" class="btn delete-confirm-btn btn-danger type-delete"><span class="glyphicon-trash glyphicon"></span></button>
+                <br clear="all" />Are you sure you want to delete this post
+            </div>
+            {{/delDiagOpen}}
+        </div>
+        {{/showbuttons}}
+    </div>
+</div>
+<hr />
+{{#repOpen}}
+{{#replies}}
+{{>row}}
+{{/replies}}
+{{/repOpen}}

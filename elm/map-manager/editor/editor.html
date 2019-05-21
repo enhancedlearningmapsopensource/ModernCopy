@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-xs-12">
+	{{#editbtn}}
+	<h2 id="menupage-title" class="saveon">Save Changes to Current Map</h2>
+	{{/editbtn}}
+	{{#savebtn}}
+	<h2 id="menupage-title" class="saveon">Save Current Map</h2>
+	{{/savebtn}}
+	
+	<div class="row">
+		<div class="col-xs-12">
+			<p class="text-info">Please enter a name and a description for the currently displayed map.</p>
+			
+			<form name="saveform" action="" method="get" onsubmit="return false">
+				<div class="form-group saveon">
+				    <label for="mapname">Map Name<span class="required-warning text-danger"> *</span></label>
+				    <input type="text" class="form-control" id="mapname" placeholder="Map Name" name="mapname" required="" value="{{mapName}}">
+				</div>
+				
+				<div class="form-group">
+				    <label for="mapdescription">Map Description</label>
+				    <textarea id="mapdescription" class="form-control" placeholder="Map Description" name="mapdescription">{{mapDesc}}</textarea>
+				</div>
+
+				{{#newnodes}}
+				<div class="form-group">
+				    <label for="newnodes">New Nodes</label>
+					<input type="text" class="form-control" id="newnodes" placeholder="" name="newnodes" required="" value="{{newnodes}}" disabled>
+				</div>
+				{{/newnodes}}
+
+				{{#oldnodes}}
+				<div class="form-group">
+				    <label for="newnodes">Removed Nodes</label>
+					<input type="text" class="form-control" id="newnodes" placeholder="" name="newnodes" required="" value="{{oldnodes}}" disabled>
+				</div>
+				{{/oldnodes}}
+				
+			</form>			
+		</div>
+	</div>
+	
+	<div class="row"><div class="col-xs-12">&nbsp;</div></div>
+	<div class="row"><div class="col-xs-12">&nbsp;</div></div>
+	<div class="row">
+		<div class="col-xs-5 text-danger"><div id="unsaved-warning" style="display:none">There are unsaved changes. Are you sure you want to Cancel? Click "Cancel" again to leave.</div></div>
+		<div class="col-xs-3"><button class="btn btn-default btn-block" id="cancel-button">Cancel</button></div>
+		{{#editbtn}}
+		<div class="col-xs-4"><button class="btn btn-primary btn-block" id="edit-button">Save Changes</button></div>
+		{{/editbtn}}
+		{{#savebtn}}
+		<div class="col-xs-4"><button class="btn btn-primary btn-block" id="save-button">Save</button></div>
+		{{/savebtn}}
+	</div>
+    </div>
+</div>

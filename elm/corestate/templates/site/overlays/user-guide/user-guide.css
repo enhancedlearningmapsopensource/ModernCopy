@@ -1,0 +1,28 @@
+﻿.dashboard-table{
+    font-size: 10px;
+}
+.dashboard-table td.msg {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dashboard-table p{
+    margin:0;
+    display: inline;
+    
+    width:100%;
+}
+#userguide-overlay #content-row{
+    overflow-y: hidden;
+}
+
+#userguide-overlay #content-row > .col-xs-12{
+    height: 100%;
+}
+
+#userguide-overlay > .overlay{
+    width: 95%;
+    height: 95%;
+}
+
+

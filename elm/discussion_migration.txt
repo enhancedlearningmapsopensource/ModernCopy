@@ -1,0 +1,84 @@
+SELECT 
+	D.DID, 
+	D.CREATORID, 
+	D.DATECREATED, 
+	/*D.OBTYPE,*/
+	MAP.TITLE,
+	P.POSTID,
+	PU.EMAIL AS PUSER,
+	P.DATECREATED AS PDATE,
+	P.ORIGINALID AS ORIGINALID,
+	/*M.DATECREATED AS MDATE,*/
+	M.MID,
+	M.MSG,
+	MORIG.MSG AS ORIGMSG,
+	/*ORIG.DATEDELETED AS ORIGDATEDEL,*/
+	POSTS.MSG AS OLDMSG,
+	POSTS.NAME AS OLDEMAIL,
+	OLDUSERS.USERID AS OLDUSERID
+FROM 
+	ELM_DISCUSSION AS D
+LEFT JOIN ELM_DISCUSSION_POST AS P 
+	ON D.DID=P.DID
+LEFT JOIN ELM_DISCUSSION_POST_MSG AS M
+	ON P.POSTID=M.POSTID
+LEFT JOIN ELM_USERS AS PU
+	ON P.CREATORID = PU.USERID
+LEFT JOIN ELM_MAP AS MAP
+	ON D.OBID = MAP.MAPID
+LEFT JOIN ELM_DISCUSSION_POST AS ORIG
+	ON P.ORIGINALID = ORIG.POSTID
+LEFT JOIN ELM_DISCUSSION_POST_MSG AS MORIG
+	ON ORIG.POSTID = MORIG.POSTID
+LEFT JOIN ELM_POSTS AS POSTS
+	ON P.DATECREATED = POSTS.DATEPOSTED
+LEFT JOIN ELM_USERS AS OLDUSERS
+	ON POSTS.NAME = OLDUSERS.EMAIL
+WHERE 
+	D.DATEDELETED IS NULL AND
+	P.DATEDELETED IS NULL AND
+	ORIG.DATEDELETED IS NULL AND
+	P.CREATORID > 0
+	
+	
+	
+	
+SELECT 
+	P.PID,
+	P.MAP,
+	P.NAME,
+	P.DATEPOSTED,
+	P.MSG,
+	R.ORIGINALID AS REPLYTO,
+	ORIG.MSG AS ORIGMSG,
+	ORIG.DATEDELETED AS ORIGDEL
+FROM 
+	ELM_POSTS AS P
+LEFT JOIN ELM_POSTREPLIES AS R ON
+	P.PID=R.REPLYID
+LEFT JOIN ELM_POSTS AS ORIG ON
+	R.ORIGINALID=ORIG.PID
+WHERE 
+	P.DATEDELETED IS NULL AND
+	P.NAME NOT LIKE 'randomuser' AND
+	P.NAME NOT LIKE 'unknown user' AND
+	P.NAME NOT LIKE 'd306v594@ku.edu' AND
+	P.NAME NOT LIKE 'cgayler@ku.edu'
+	
+112	
+UPDATE ELM_DISCUSSION_POST SET CREATORID=144 WHERE POSTID=147
+UPDATE ELM_DISCUSSION_POST SET CREATORID=112 WHERE POSTID=152
+UPDATE ELM_DISCUSSION_POST SET CREATORID=107 WHERE POSTID=161
+UPDATE ELM_DISCUSSION_POST SET CREATORID=125 WHERE POSTID=164
+UPDATE ELM_DISCUSSION_POST SET CREATORID=160 WHERE POSTID=178
+
+UPDATE ELM_DISCUSSION_POST_MSG SET POSTID=163 WHERE MID=139
+
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2016-12-27 10:27:40',145,'<p>Thank you! &nbsp;We will definitely take your feedback into consideration.</p>')
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2016-10-10 14:53:25',148,'	<p>Hi! If you click on the paperclip on the pdf page, it contains copies of all the handouts! Hope that helps!&nbsp;</p> <p>Katie&nbsp;</p>')
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2017-01-17 20:42:57',152,'<p>I felt that this Map View did a great job on showing the progress of my students. &nbsp;I had to teach and reteach the lessons multiple times, about 3 for each lesson, but I found that 85% of my class understood at the end.&nbsp;</p> <p>What I would do differently next time is that I would choose a simpler text to teach the lesson, and then build up to grade level for them to practice and understand what to look for. &nbsp;</p> <p>Overall I think it went really well. &nbsp;The 3 lessons ended up taking more time, but they were still able to achieve the end goal. &nbsp;</p> <p>&nbsp;</p> <p>-Adam (Alaska)</p>')
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2017-01-20 16:07:28',153,'<p><span style="color: #222222; font-family: Verdana; font-size: 14.6667px;">Oh, that\'s wonderful that the lessons helped you see student progress. &nbsp;Yay for formative assessment. &nbsp;I like the idea of starting with a simpler text and working up. &nbsp;That seems like a solid scaffolding technique. &nbsp;Would you mind adding this feedback to your qualtrics survey when you complete it? &nbsp;Happy 2017! &nbsp;Please let us know if you have more feedback or questions.</span></p>	')
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2016-11-28 06:19:45',161,'<p>Yes! &nbsp;I used the lesson in place of my chapter...the progression was a bit different than I was used to, but worked a LOT better! &nbsp;They were able to discover the math rather than just try math I fed to them. &nbsp;:)</p>')
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2016-11-29 10:31:11',162,'<p>Awesome! Thank you for the feedback, Jenni. As I researched&nbsp;this topic, I really wished I would have taught systems of equations this way. My students ALWAYS struggled to understand the concepts, regardless of what I tried, but I never tried this. I am SO glad this worked for you and your students!</p>')
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2017-04-30 21:31:50',164,'<p>I also used this in place of a chapter in the text that I use. &nbsp;I gave the same summative exam as I gave last year and found that I had more students demonstrating understanding of solving systems of equations compared to last year. &nbsp;I don\'t know why I never thought to start by using a logical problem solving approach and teaching solving by graphing, substitution, and elimination together compared to in isolation like the text book. &nbsp;The students enjoyed the problem solving approach and gained a greater understanding of why the elimination method works!</p> <p>&nbsp;</p>')
+INSERT INTO ELM_DISCUSSION_POST_MSG(DATECREATED,POSTID,MSG) VALUES ('2017-05-01 08:21:56',165,'<p>I have to admit that I was hesitant to tackle a unit on systems of linear equations. As a teacher, I also used the sequence the textbook suggested - graphing, substitution, and elimination in that order and in isolation. I recognized that it didn\'t work very well, but I couldn\'t ever come up with something better. The research that suggested this problem solving approach without the use of variables (initially) was eye opening and I am SO glad it worked with your students! Thank you for trying something out of the ordinary and for providing feedback on how it went. We appreciate it SO much.</p> <p>Lindsey</p>')

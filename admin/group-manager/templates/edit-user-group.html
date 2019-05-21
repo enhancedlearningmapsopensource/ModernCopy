@@ -1,0 +1,43 @@
+<style>
+    .avaliable.row, .assigned.row{
+        border-radius: var(--corner-radius);
+        background: var(--color-2);
+        padding: 5px;
+        cursor: pointer;
+    }
+    .avaliable.row span, .assigned.row span{
+        float:right;
+    }
+</style>
+
+<div class='row'>
+    <div class='col-xs-5'>
+        <h4>User Groups</h4>
+        {{#moddata}}
+        {{#assigned}}
+        <div class='row assigned' id='group-{{id}}'>
+            <div class='col-xs-12'>
+                {{name}}
+                <span class="glyphicon glyphicon-minus"></span>
+            </div>
+        </div>
+        {{/assigned}}
+        {{/moddata}}
+    </div>    
+    <div class='col-xs-1'>
+        &nbsp;
+    </div>
+    <div class='col-xs-5'>
+        <h4>Avaliable Groups</h4>
+        {{#moddata}}
+        {{#avaliable}}
+        <div class='row avaliable' id='group-{{id}}'>
+            <div class='col-xs-12'>
+                {{name}}
+                <span class="glyphicon glyphicon-plus"></span>
+            </div>
+        </div>
+        {{/avaliable}}
+        {{/moddata}}
+    </div>
+</div>

@@ -1,0 +1,10 @@
+.graph-window{
+    width: 100%;
+    height: 100%;
+}
+.graph-window > .cascade-window{
+    display: block;
+}
+.graph-window.side-panel-open > .cascade-window{
+    left: var(--width-side-panel);
+}

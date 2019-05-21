@@ -1,0 +1,38 @@
+#io-container .io-panel > div{
+    border: 1px black solid;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+#io-container .io-panel.export-panel textarea{
+    height: 500px;
+}
+
+/** Import Panel */
+#io-container .io-panel.import-panel .status-text{
+    height: 500px;
+}
+
+/** Import Panel - Paste */
+#io-container .io-panel.import-panel .paste-area{
+    display:none;
+}
+#io-container .io-panel.import-panel.ready .paste-area{
+    display:block;
+}
+
+/** Import - Start Check */
+#io-container .io-panel.import-panel .start-check{
+    display:none;
+}
+#io-container .io-panel.import-panel.start .start-check{
+    display:block;
+}
+
+/** Import - Status */
+#io-container .io-panel.import-panel .status-area{
+    display:none;
+}
+#io-container .io-panel.import-panel.running .status-area{
+    display:block;
+}

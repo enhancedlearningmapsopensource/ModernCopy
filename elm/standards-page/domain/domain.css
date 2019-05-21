@@ -1,0 +1,38 @@
+.subject-table-row > .domain-group{
+    /*flex: 0 1 100%;*/
+    display: flex;
+    flex-flow: column;
+    margin-bottom: var(--table-margin);
+    width: 100%;
+}
+.subject-table-row > .domain-group > div{
+    flex: 0 1 100%;
+}
+
+/** ==================================  */
+/** == NAME                             */
+/** ==================================  */
+.subject-table-row > .domain-group > .domain-group-name{
+    padding: 4px;
+    text-align: center;
+    background-color: rgb(228, 233, 239);
+    margin-bottom: calc(2*var(--table-margin));
+    margin-left: var(--table-margin);
+    margin-right: var(--table-margin);
+}
+.subject-table-row > .domain-group > .domain-group-name:hover{
+    cursor: pointer;
+}
+.subject-table-row > .domain-group.selected > .domain-group-name{
+    background-color: #7491AF;
+    color: rgb(228, 233, 239);
+}
+
+/** ==================================  */
+/** == CELLS                            */
+/** ==================================  */
+.subject-table-row > .domain-group > .domain-group-cells{
+    display: flex;
+    flex-flow: row;
+    padding: calc(-1*var(--table-margin));
+}

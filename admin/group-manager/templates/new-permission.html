@@ -1,0 +1,25 @@
+<style>
+    #new-permission-form{
+        display: none;
+    }
+    #new-permission-form.open{
+        display: block;
+    }
+    #new-row.closed{
+        display: none;
+    }
+</style>
+
+<div class='col-xs-12'>
+    <div class='row' id='new-row'>
+        <button class='btn btn-block btn-default'>New</button>
+    </div>
+    <div class='row' id='new-{{type}}-form'>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name">
+        </div>
+        <button type="submit" id="ok-new-row" class="btn btn-primary">OK</button>
+        <button type="submit" id="cancel-new-row" class="btn btn-default">Cancel</button>
+    </div>
+</div>

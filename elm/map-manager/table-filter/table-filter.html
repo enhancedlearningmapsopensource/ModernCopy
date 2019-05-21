@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+
+            <label for="filtersearch">Filter Maps</label>
+            <input class="form-control" id='filter-maps' placeholder='Filter maps (examples: "Test", "9/25/2017", "3.OA")' name="filter-maps" value="{{filter}}" />
+
+            <!--div class="checkbox adminonly">
+                    <label>
+                    <input type='checkbox' id='onlymine' checked>Show Only My Maps
+                    </label>
+            </div-->
+            <div class="checkbox">
+                <label>
+                    <input type='checkbox' id='showdeleted' {{#showDeleted}}checked{{/showDeleted}} />Show Deleted Maps
+                </label>
+            </div>
+        </div>
+    </div>
+</div>

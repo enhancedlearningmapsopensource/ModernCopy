@@ -1,0 +1,16 @@
+﻿.people-table{
+    font-size: 10px;
+}
+.people-table td.msg {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.people-table p{
+    margin:0;
+    display: inline;
+    
+    width:100%;
+}
+
+

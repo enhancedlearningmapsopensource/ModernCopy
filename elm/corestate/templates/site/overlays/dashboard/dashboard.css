@@ -1,0 +1,28 @@
+﻿.dashboard-table{
+    font-size: 10px;
+}
+.dashboard-table td.msg {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.dashboard-table p{
+    margin:0;
+    display: inline;
+    
+    width:100%;
+}
+
+.discussions{
+    width: 100%;
+}
+.discussions > .post{
+    border: solid 2px #4253623d;
+    padding: 5px;
+    border-radius: 16px;
+    width: 100%;    
+    font-size: 0.7em;
+}
+.discussions > .post > .date{
+    float: right;
+}
